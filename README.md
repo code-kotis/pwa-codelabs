@@ -1,6 +1,6 @@
 # Progressive Web Application Codelabs
 
-*Your first progressive application*
+*Your first progressive web application.*
 
 ## What you need to get started
 
