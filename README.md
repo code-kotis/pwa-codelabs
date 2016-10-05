@@ -4,11 +4,11 @@
 
 ## What you need to get started
 
-  - [ ] - [Chrome Browser](https://www.google.com/chrome/) (latest).
+  - [ ] - [Chrome Browser](https://www.google.com/chrome/) (latest)
 
-  - [ ] - Text editor (anything you like 😈).
+  - [ ] - Text Editor.
 
-  - [ ] - [Node](https://nodejs.org/en/) for running the code (if not any other to run your project in localhost).
+  - [ ] - [Chrome Extension](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) to run your code in localhost.
 
 
 ## Lets get started
