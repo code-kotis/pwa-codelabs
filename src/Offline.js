@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Offline extends Component {
   render() {
     return(
-      <div>Offline</div>
+      <div><h1>Offline</h1></div>
     );
   }
 }

@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 class Push extends Component {
   render() {
     return(
-      <div>Push</div>
+      <div>
+        <h1>Push</h1>
+      </div>
     );
   }
 }

@@ -7,7 +7,6 @@ class Menu extends Component {
     return(
       <div className="menu-container">
         <div className="menu">
-          <div className="menu__header">PWA Codelabs</div>
           <ul className="menu__list">
             <li><NavLink to="/" onlyActiveOnIndex={true}>Introduction</NavLink></li>
             <li><NavLink to="/pwa">Progressive Web Application</NavLink></li>

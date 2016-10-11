@@ -45,13 +45,6 @@
   padding: 20px;
 }
 
-.menu__header {
-  height: 20px;
-  background: #2196f3;
-  color: #fff;
-  padding: 20px;
-}
-
 .menu__list a.active {
   color: #2196f3;
 }
