@@ -46,10 +46,10 @@
 }
 
 .menu__header {
-  height: 60px;
+  height: 20px;
   background: #2196f3;
   color: #fff;
-  border-bottom: 1px solid #ddd;
+  padding: 20px;
 }
 
 .menu__list a.active {
