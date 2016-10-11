@@ -8,7 +8,7 @@
 
   - [ ] - Text Editor.
 
-  - [ ] - [Chrome Extension](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) to run your code in localhost.
+  - [ ] - [Chrome Extension](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) to run your code in local server.
 
 
 ## Lets get started
