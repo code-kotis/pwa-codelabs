@@ -1,4 +1,33 @@
 .app__container {
-  margin-left: 300px;
   padding: 40px 20px 20px 10px;
+  margin-left: 280px;
+  background: #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.app__container > div {
+  padding: 20px;
+  background: #fff;
+  width: 700px;
+  height: 650px;
+  overflow-y: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.pwa p {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.pwa ul li {
+  margin: 40px;
+  padding: 10px;
+  list-style-type: decimal;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
