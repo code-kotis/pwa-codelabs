@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-highlight.js": "^1.0.5",
     "react-router": "^2.8.1"
   },
   "scripts": {

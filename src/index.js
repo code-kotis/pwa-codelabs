@@ -8,15 +8,18 @@ import PWA from './PWA';
 import Caching from './Caching';
 import Offline from './Offline';
 import Push from './Push';
+import Setup from './Setup';
 import './index.css';
+import './syntax.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Introduction} />
       <Route path="/introduction" component={Introduction} />
-      <Route path="/serviceworker" component={ServiceWorker} />
+      <Route path="/setup" component={Setup} />
       <Route path="/pwa" component={PWA} />
+      <Route path="/serviceworker" component={ServiceWorker} />
       <Route path="/caching" component={Caching} />
       <Route path="/offline" component={Offline} />
       <Route path="/push" component={Push} />

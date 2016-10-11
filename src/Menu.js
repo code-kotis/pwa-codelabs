@@ -9,6 +9,7 @@ class Menu extends Component {
         <div className="menu">
           <ul className="menu__list">
             <li><NavLink to="/" onlyActiveOnIndex={true}>Introduction</NavLink></li>
+            <li><NavLink to="/setup">Setup</NavLink></li>
             <li><NavLink to="/pwa">Progressive Web Application</NavLink></li>
             <li><NavLink to="/serviceworker">Service Worker</NavLink></li>
             <li><NavLink to="/caching">Caching</NavLink></li>
