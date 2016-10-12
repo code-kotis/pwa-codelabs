@@ -25,10 +25,6 @@
   margin-bottom: 10px;
 }
 
-h1 + p {
-  font-style: italic;
-}
-
 .pwa a {
   display: block;
   color: #2196f3;
