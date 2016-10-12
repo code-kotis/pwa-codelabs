@@ -26,11 +26,13 @@
   overflow: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  margin-left: 0;
 }
 
 .menu__list li {
   color: rgba(0,0,0,0.87);
   cursor: pointer;
+  padding: 0;
 }
 
 .menu__list li:hover,

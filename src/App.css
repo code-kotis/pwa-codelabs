@@ -12,22 +12,24 @@
 .app__container > div {
   padding: 30px;
   background: #fff;
-  width: 850px;
+  max-width: 850px;
+  min-width: 730px;
   height: 650px;
   overflow-y: auto;
   margin: 0 auto;
   margin-bottom: 50px;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
 }
 
 .pwa p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+h1 + p {
   font-style: italic;
 }
 
-.pwa ul li {
-  margin: 40px;
-  padding: 10px;
-  list-style-type: decimal;
-  margin-bottom: 10px;
-  margin-top: 10px;
+.pwa a {
+  display: block;
+  color: #2196f3;
 }

@@ -17,3 +17,30 @@ h1 {
   font-size: 25px;
   margin-bottom: 20px;
 }
+
+p {
+  line-height: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+b {
+  font-weight: 500;
+}
+
+ul {
+  margin-left: 20px;
+  list-style-type: decimal;
+}
+
+li {
+  padding: 10px;
+}
+
+.mtop30 {
+  margin-top: 30px;
+}
+
+.disc {
+  list-style-type: disc;
+}
