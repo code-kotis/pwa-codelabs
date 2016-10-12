@@ -1,20 +1,14 @@
 .app__container {
   padding: 40px 20px 20px 10px;
   margin-left: 280px;
-  background: #ccc;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  background: #dedede;
 }
 
 .app__container > div {
   padding: 30px;
   background: #fff;
-  max-width: 850px;
-  min-width: 730px;
-  height: 650px;
+  width: 750px;
+  min-height: 650px;
   overflow-y: auto;
   margin: 0 auto;
   margin-bottom: 50px;
