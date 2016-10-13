@@ -97,3 +97,9 @@
   color: #000;
   font-size: 13px;
 }
+
+@media all and (max-width: 768px) {
+  .menu {
+    transform: translateX(-103%);
+  }
+}

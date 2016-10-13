@@ -19,8 +19,7 @@
   width: 35px;
   height: 35px;
   float: right;
-  margin-top: -20px;
-  margin-right: 10px;
+  margin: -30px 10px 10px 0;
   cursor: pointer;
 }
 
@@ -31,4 +30,20 @@
 .pwa a {
   display: block;
   color: #2196f3;
+}
+
+@media all and (max-width: 768px) {
+  .app__container {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .app__container > div {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+
+  .app__source {
+    display: none;
+  }
 }
