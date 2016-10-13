@@ -1,5 +1,5 @@
 .menu {
-  width: 280px;
+  width: 290px;
   height: 100%;
   background: #fff;
   position: fixed;
@@ -27,12 +27,26 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   margin-left: 0;
+  margin-top: 20px;
 }
 
 .menu__list li {
   color: rgba(0,0,0,0.87);
   cursor: pointer;
   padding: 0;
+  position: relative;
+}
+
+.menu__list li:not(:last-child)::before {
+  content: '';
+  border: 1px solid #ccc;
+  width: 0;
+  height: 28px;
+  display: block;
+  margin-top: 45px;
+  z-index: 1;
+  position: absolute;
+  left: 30px;
 }
 
 .menu__list li:hover,
@@ -44,9 +58,41 @@
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 20px;
+  padding: 15px;
+  font-size: 15px;
 }
 
 .menu__list a.active {
-  color: #2196f3;
+  background: #2196f3;
+  color: #fff;
+  font-weight: 500;
+}
+
+.menu__list a.active .menu__steps {
+  background: #fff;
+  color: #000;
+}
+
+.menu__steps {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+  line-height: 30px;
+  z-index: 2;
+  font-weight: normal;
+}
+
+.menu__author {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+}
+
+.menu__author a {
+  color: #000;
 }
