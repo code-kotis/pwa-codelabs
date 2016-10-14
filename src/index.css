@@ -14,7 +14,7 @@ body {
 
 h1 {
   color: #008000;
-  font-size: 25px;
+  font-size: 27px;
   margin-bottom: 20px;
 }
 
@@ -30,11 +30,13 @@ b {
 
 ul {
   margin-left: 20px;
-  list-style-type: decimal;
+  list-style-type: disc;
 }
 
 li {
   padding: 10px;
+  padding-left: 0;
+  margin-left: 10px;
 }
 
 .mtop30 {
@@ -43,4 +45,16 @@ li {
 
 .disc {
   list-style-type: disc;
+}
+
+.highlight {
+  display: inline-block;
+  background: #d8d8d8;
+  padding: 4px;
+  border-radius: 2px;
+  min-width: 35px;
+}
+
+a {
+  color: #2196f3;
 }

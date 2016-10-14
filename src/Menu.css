@@ -22,7 +22,7 @@
 
 .menu__list {
   width: inherit;
-  height: inherit;
+  height: calc(100% - 60px);
   overflow: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -35,6 +35,8 @@
   cursor: pointer;
   padding: 0;
   position: relative;
+  list-style-type: none;
+  margin-left: 0;
 }
 
 .menu__list li:not(:last-child)::before {
@@ -88,9 +90,7 @@
 }
 
 .menu__author {
-  position: fixed;
-  bottom: 20px;
-  left: 30px;
+  margin-left: 20px;
 }
 
 .menu__author a {
