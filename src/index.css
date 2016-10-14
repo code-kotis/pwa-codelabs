@@ -39,10 +39,6 @@ li {
   margin-left: 10px;
 }
 
-.mtop30 {
-  margin-top: 30px;
-}
-
 .disc {
   list-style-type: disc;
 }
@@ -52,9 +48,22 @@ li {
   background: #d8d8d8;
   padding: 4px;
   border-radius: 2px;
-  min-width: 35px;
+  font-size: 13px;
 }
 
 a {
   color: #2196f3;
+}
+
+.hljs {
+  border-radius: 2px;
+}
+
+.no--select {
+  user-select: none;
+}
+
+i {
+  font-size: 14.4px;
+  font-style: italic;
 }
