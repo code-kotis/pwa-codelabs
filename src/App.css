@@ -69,9 +69,7 @@
   margin-bottom: 10px;
 }
 
-.app__notes span {
-  display: block;
-  line-height: 1.3em;
+.app__notes p {
   word-break: break-all;
   margin-top: 10px;
   margin-bottom: 10px;

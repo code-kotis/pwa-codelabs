@@ -8,7 +8,7 @@ class Note extends Component {
         {
           heading && <h4>{heading}:</h4>
         }
-        <span>{text}</span>
+        <p>{text}</p>
       </div>
     );
   }

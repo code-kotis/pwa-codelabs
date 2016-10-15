@@ -3,6 +3,28 @@ import NavLink from './NavLink';
 import './Menu.css';
 
 class Menu extends Component {
+  componentDidMount() {
+    this.bindNavigation();
+  }
+
+  bindNavigation() {
+    document.body.addEventListener('keyup', (event) => {
+      let activeMenuElement = document.querySelector('.menu__list a.active');
+      let activeElementParent = activeMenuElement.parentElement;
+      if (event.key === 'ArrowLeft') {
+        let activeSiblingElement = activeElementParent.previousElementSibling;
+        if (activeSiblingElement && activeSiblingElement.children) {
+          activeElementParent.previousElementSibling.children[0].click();
+        }
+      }
+      else if (event.key === 'ArrowRight') {
+        let activeSiblingElement = activeElementParent.nextElementSibling;
+        if (activeSiblingElement && activeSiblingElement.children) {
+          activeSiblingElement.children[0].click();
+        }
+      }
+    });
+  }
   render() {
     return(
       <div className="menu-container">
