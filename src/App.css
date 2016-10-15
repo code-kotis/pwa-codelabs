@@ -1,5 +1,5 @@
 .app__container {
-  padding: 40px 20px 20px 10px;
+  padding: 110px 20px 20px 10px;
   margin-left: 280px;
   background: #dedede;
 }
@@ -18,9 +18,10 @@
 .app__source {
   width: 35px;
   height: 35px;
-  float: right;
-  margin: -30px 10px 10px 0;
   cursor: pointer;
+  position: fixed;
+  right: 30px;
+  top: 10px;
 }
 
 .pwa p {
@@ -75,6 +76,25 @@
   margin-bottom: 10px;
 }
 
+.app__header {
+  width: 100%;
+  height: 56px;
+  background: #2196f3;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-left: 280px;
+}
+
+.app__header h3 {
+  color: #fff;
+  padding: 18px;
+  padding-left: 30px;
+  font-size: 19px;
+}
+
 .setup__steps {
   list-style-type: decimal;
 }
@@ -82,7 +102,7 @@
 @media all and (max-width: 768px) {
   .app__container {
     margin-left: 0;
-    padding: 0;
+    padding-top: 90px;
   }
 
   .app__container > div {
@@ -92,5 +112,9 @@
 
   .app__source {
     display: none;
+  }
+
+  .app__header {
+    padding-left: 0px;
   }
 }

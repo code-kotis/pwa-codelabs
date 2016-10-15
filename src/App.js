@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
+import Header from './Header';
 import './App.css';
 import GitHub from './GitHub.png';
 
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div className="app">
         <Menu />
+        <Header />
         <div className="app__container">
           <a title="Source" href="https://github.com/code-kotis/pwa-codelabs" target="_blank" rel="noopener">
             <img className="app__source" alt="Source" src={GitHub} />

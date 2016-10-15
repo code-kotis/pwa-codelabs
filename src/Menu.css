@@ -27,7 +27,6 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   margin-left: 0;
-  margin-top: 20px;
 }
 
 .menu__list li {
@@ -43,7 +42,7 @@
   content: '';
   border: 1px solid #ccc;
   width: 0;
-  height: 28px;
+  height: 24px;
   display: block;
   margin-top: 45px;
   z-index: 1;
@@ -62,6 +61,7 @@
   display: block;
   padding: 15px 20px;
   font-size: 15px;
+  height: 56px;
 }
 
 .menu__list a.active {

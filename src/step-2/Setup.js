@@ -18,7 +18,7 @@ class Setup extends Component {
           <li>Download this chrome extention to run your code in localhost server.</li>
           <a className="btn" href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Web Server</a>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/AK6swHiPtew" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AK6swHiPtew" frameBorder="0" allowFullScreen></iframe>
         </ul>
       </div>
     );
