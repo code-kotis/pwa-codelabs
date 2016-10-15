@@ -8,15 +8,18 @@ class Setup extends Component {
       <div>
         <h1>2. Setup</h1>
         <p>To setup the codelabs, follow the below steps.</p>
-        <p><b>Follow the steps</b></p>
-        <p><i>1. Clone the repo via command line</i></p>
-        <SyntaxHighlighter>
-          <span className="bash">
-            <span className="no--select space">$</span>{code}</span>
-        </SyntaxHighlighter>
+        <b>Steps</b>
+        <ul className="setup__steps">
+          <li>Clone the repo via command line.</li>
+          <SyntaxHighlighter>
+            <span className="bash">
+              <span className="no--select space">$</span>{code}</span>
+          </SyntaxHighlighter>
+          <li>Download this chrome extention to run your code in localhost server.</li>
+          <a className="btn" href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Web Server</a>
 
-        <p><i>2. Download this chrome extention to run localhost server</i></p>
-        <a className="btn" href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Install Web Server</a>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AK6swHiPtew" frameborder="0" allowfullscreen></iframe>
+        </ul>
       </div>
     );
   }

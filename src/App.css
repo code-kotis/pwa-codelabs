@@ -34,7 +34,7 @@
 
 .btn {
   display: inline-block;
-  width: 160px;
+  width: 120px;
   min-height: 30px;
   background: #dedede;
   border-radius: 2px;
@@ -73,6 +73,10 @@
   word-break: break-all;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.setup__steps {
+  list-style-type: decimal;
 }
 
 @media all and (max-width: 768px) {
