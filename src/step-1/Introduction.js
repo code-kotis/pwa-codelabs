@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Note from '../Note';
 
 class Introduction extends Component {
   render() {
@@ -22,6 +23,10 @@ class Introduction extends Component {
           <li>Basic knowledge of <span className="highlight">HTML</span>, <span className="highlight">CSS</span>, <span className="highlight">Javascript</span> and <span className="highlight">DevTools</span></li>
           <li><a href="https://nodejs.org/en/" target="_blank">Node</a> (for deployment)</li>
         </ul>
+
+        <Note
+          text="Fuxk off asdasdasdasdadadadsdjfljfkdfjdskfjdskfjsdklfjsdkljdsklfjsdklfjsdklfjsdklfjdklfjsdkfjskldfjkasdjfksdjfksdjfk;sdjfksjdfklsjdfklsjdfkl"
+        />
       </div>
     );
   }

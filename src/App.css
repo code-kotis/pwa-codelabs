@@ -54,6 +54,29 @@
   box-shadow: none;
 }
 
+.app__notes {
+  width: 100%;
+  min-height: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #fff3ce;
+  padding: 10px;
+  border-left: 3px solid #ffdb6f;
+}
+
+.app__notes h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.app__notes span {
+  display: block;
+  line-height: 1.3em;
+  word-break: break-all;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 @media all and (max-width: 768px) {
   .app__container {
     margin-left: 0;
