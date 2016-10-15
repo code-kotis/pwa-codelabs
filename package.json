@@ -9,12 +9,14 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
-    "react-syntax-highlighter": "^2.10.0"
+    "react-syntax-highlighter": "^2.10.0",
+    "sw-precache": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run sw-precache",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "sw-precache": "sw-precache --root='build/' --static-file-globs='build/**/!(*map*)' --verbose"
+  },
+  "homepage": "./"
 }

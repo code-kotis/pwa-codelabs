@@ -48,7 +48,7 @@
   margin-top: 45px;
   z-index: 1;
   position: absolute;
-  left: 30px;
+  left: 35px;
 }
 
 .menu__list li:hover,
@@ -60,7 +60,7 @@
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 15px;
+  padding: 15px 20px;
   font-size: 15px;
 }
 
