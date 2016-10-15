@@ -33,9 +33,9 @@
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   width: 160px;
-  height: 25px;
+  min-height: 30px;
   background: #dedede;
   border-radius: 2px;
   padding: 8px;
