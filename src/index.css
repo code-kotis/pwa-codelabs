@@ -45,6 +45,7 @@ ul {
 
 li {
   padding: 10px;
+  padding-top: 5px;
   padding-left: 0;
   margin-left: 10px;
 }
@@ -56,9 +57,10 @@ li {
 .highlight {
   display: inline-block;
   background: #d8d8d8;
-  padding: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 2px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 a {

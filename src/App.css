@@ -32,6 +32,7 @@
 
 .pwa {
   margin-left: 5px;
+  margin-top: 20px;
 }
 
 .pwa li {
@@ -39,16 +40,29 @@
   list-style-type: none;
 }
 
-.pwa li,
-.pwa li b,
-.introduction li {
-  font-size: 15px;
+.pwa li {
+  content: '';
+  background-image: url('./tick.png');
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  display: inline-block;
+  background-position-y: 6px;
 }
 
-.pwa li svg {
-  vertical-align: top;
-  margin-right: 5px;
-  fill: #008000;
+.pwa li {
+  padding-left: 25px;
+  padding-top: 0;
+}
+
+.introduction li,
+.pwa li {
+  line-height: 24px;
+}
+
+.introduction li,
+.pwa li,
+.pwa li b {
+  font-size: 15px;
 }
 
 .btn {
@@ -111,6 +125,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  z-index: 1;
 }
 
 .app__header h3 {
