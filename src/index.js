@@ -14,7 +14,8 @@ import './syntax.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    // point subdomain here /codelabs
+    <Route path="/codelabs" component={App}>
       <IndexRoute component={Introduction} />
       <Route path="/introduction" component={Introduction} />
       <Route path="/setup" component={Setup} />

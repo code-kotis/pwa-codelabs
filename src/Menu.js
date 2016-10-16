@@ -67,7 +67,7 @@ class Menu extends Component {
           <img className="menu__logo" src={codelabsImg} alt="logo" />
           <ul className="menu__list">
             <li>
-              <NavLink to="/" onlyActiveOnIndex={true}>
+              <NavLink to="/introduction" onlyActiveOnIndex={true}>
                 <span className="menu__steps">1</span>
                 Introduction
               </NavLink>
@@ -97,7 +97,7 @@ class Menu extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/finish">
+              <NavLink to="/bgsync">
                 <span className="menu__steps">6</span>
                 Background Sync
               </NavLink>
