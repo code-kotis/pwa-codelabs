@@ -111,6 +111,7 @@
     margin-bottom: 0;
     box-shadow: none;
     width: 100%;
+    padding: 20px;
   }
 
   .app__source {
