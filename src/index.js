@@ -15,7 +15,7 @@ import './syntax.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path="https://code-kotis.github.io/pwa-codelabs/" component={App}>
       <IndexRoute component={Introduction} />
       <Route path="/introduction" component={Introduction} />
       <Route path="/setup" component={Setup} />
