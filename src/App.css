@@ -24,13 +24,31 @@
   top: 10px;
 }
 
-.pwa p {
-  margin-bottom: 10px;
+.pwa b {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
-.pwa a {
-  display: block;
-  color: #2196f3;
+.pwa {
+  margin-left: 5px;
+}
+
+.pwa li {
+  margin: 0;
+  list-style-type: none;
+}
+
+.pwa li,
+.pwa li b,
+.introduction li {
+  font-size: 15px;
+}
+
+.pwa li svg {
+  vertical-align: top;
+  margin-right: 5px;
+  fill: #008000;
 }
 
 .btn {
@@ -74,6 +92,10 @@
   word-break: break-all;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.app__notes a {
+  color: #ffa000;
 }
 
 .app__header {
