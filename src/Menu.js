@@ -79,38 +79,32 @@ class Menu extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/pwa">
-                <span className="menu__steps">3</span>
-                Progressive Web Application
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/serviceworker">
-                <span className="menu__steps">4</span>
+                <span className="menu__steps">3</span>
                 Service Worker
               </NavLink>
             </li>
             <li>
-              <NavLink to="/caching">
-                <span className="menu__steps">5</span>
-                Caching
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/offline">
-                <span className="menu__steps">6</span>
+                <span className="menu__steps">4</span>
                 Offline
               </NavLink>
             </li>
             <li>
               <NavLink to="/push">
-                <span className="menu__steps">7</span>
-                Push
+                <span className="menu__steps">5</span>
+                Push Notification
               </NavLink>
             </li>
             <li>
               <NavLink to="/finish">
-                <span className="menu__steps">8</span>
+                <span className="menu__steps">6</span>
+                Background Sync
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/finish">
+                <span className="menu__steps">7</span>
                 Finish
               </NavLink>
             </li>
