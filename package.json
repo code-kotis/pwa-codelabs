@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && npm run sw-precache",
     "test": "react-scripts test --env=jsdom",
-    "deploy": "bash deploy.sh",
+    "deploy": "npm run build && bash deploy.sh",
     "sw-precache": "sw-precache --root='build/' --static-file-globs='build/**/!(*map*)' --verbose"
   },
   "homepage": "./"
