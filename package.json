@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^0.11.0",
     "react-scripts": "0.6.1"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && npm run sw-precache",
     "test": "react-scripts test --env=jsdom",
+    "deploy": "gh-pages -d build",
     "sw-precache": "sw-precache --root='build/' --static-file-globs='build/**/!(*map*)' --verbose"
   },
   "homepage": "./"
