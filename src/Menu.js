@@ -10,7 +10,7 @@ class Menu extends Component {
     this.menuIcon = document.querySelector(".menu__icon");
     this.menu = document.querySelector(".menu");
     this.menuOverlay = document.querySelector(".menu__overlay");
-    this.menuList = document.querySelector('.menu__list a.active');
+    this.menuList = null;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -45,15 +45,15 @@ class Menu extends Component {
 
   bindNavigation() {
     document.body.addEventListener('keyup', (event) => {
-      let activeElementParent = this.menuList.parentElement;
+      let menuListElement = document.querySelector('.menu__list a.active').parentElement;
       if (event.key === 'ArrowLeft') {
-        let activeSiblingElement = activeElementParent.previousElementSibling;
+        let activeSiblingElement = menuListElement.previousElementSibling;
         if (activeSiblingElement && activeSiblingElement.children) {
-          activeElementParent.previousElementSibling.children[0].click();
+          menuListElement.previousElementSibling.children[0].click();
         }
       }
       else if (event.key === 'ArrowRight') {
-        let activeSiblingElement = activeElementParent.nextElementSibling;
+        let activeSiblingElement = menuListElement.nextElementSibling;
         if (activeSiblingElement && activeSiblingElement.children) {
           activeSiblingElement.children[0].click();
         }
