@@ -67,43 +67,43 @@ class Menu extends Component {
           <img className="menu__logo" src={codelabsImg} alt="logo" />
           <ul className="menu__list">
             <li>
-              <NavLink to="/introduction" onlyActiveOnIndex={true}>
+              <NavLink to="/codelabs/introduction" onlyActiveOnIndex={true}>
                 <span className="menu__steps">1</span>
                 Introduction
               </NavLink>
             </li>
             <li>
-              <NavLink to="/setup">
+              <NavLink to="/codelabs/setup">
                 <span className="menu__steps">2</span>
                 Setup
               </NavLink>
             </li>
             <li>
-              <NavLink to="/serviceworker">
+              <NavLink to="/codelabs/serviceworker">
                 <span className="menu__steps">3</span>
                 Service Worker
               </NavLink>
             </li>
             <li>
-              <NavLink to="/offline">
+              <NavLink to="/codelabs/offline">
                 <span className="menu__steps">4</span>
                 Offline
               </NavLink>
             </li>
             <li>
-              <NavLink to="/push">
+              <NavLink to="/codelabs/push">
                 <span className="menu__steps">5</span>
                 Push Notification
               </NavLink>
             </li>
             <li>
-              <NavLink to="/bgsync">
+              <NavLink to="/codelabs/bgsync">
                 <span className="menu__steps">6</span>
                 Background Sync
               </NavLink>
             </li>
             <li>
-              <NavLink to="/finish">
+              <NavLink to="/codelabs/finish">
                 <span className="menu__steps">7</span>
                 Finish
               </NavLink>
