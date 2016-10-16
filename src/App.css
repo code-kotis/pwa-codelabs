@@ -1,5 +1,5 @@
 .app__container {
-  padding: 110px 20px 20px 10px;
+  padding: 90px 20px 20px 10px;
   margin-left: 280px;
   background: #dedede;
 }
@@ -7,7 +7,7 @@
 .app__container > div {
   padding: 30px;
   background: #fff;
-  width: 750px;
+  width: 730px;
   min-height: 650px;
   overflow-y: auto;
   margin: 0 auto;
@@ -86,12 +86,14 @@
   right: 0;
   left: 0;
   padding-left: 280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .app__header h3 {
   color: #fff;
-  padding: 18px;
-  padding-left: 30px;
+  padding-left: 40px;
   font-size: 19px;
 }
 
@@ -102,19 +104,31 @@
 @media all and (max-width: 768px) {
   .app__container {
     margin-left: 0;
-    padding-top: 90px;
+    padding-top: 75px;
   }
 
   .app__container > div {
     margin-bottom: 0;
     box-shadow: none;
+    width: 100%;
   }
 
   .app__source {
-    display: none;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: 20px;
   }
 
   .app__header {
-    padding-left: 0px;
+    padding-left: 0;
+  }
+
+  .app__header h3 {
+    padding-left: 10px;
+  }
+
+  .app__source:active {
+    outline: 1px solid #fff;
   }
 }

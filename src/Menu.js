@@ -5,12 +5,46 @@ import './Menu.css';
 class Menu extends Component {
   componentDidMount() {
     this.bindNavigation();
+    this.hideMenu = this.hideMenu.bind(this);
+    this.menuIcon = document.querySelector(".menu__icon");
+    this.menu = document.querySelector(".menu");
+    this.menuOverlay = document.querySelector(".menu__overlay");
+    this.menuList = document.querySelector('.menu__list a.active');
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isMenuOpen) {
+      this.showMenu();
+    }
+  }
+
+  toggleMenu() {
+    if (!this.isMenuOpen()) {
+      this.showMenu();
+    }
+    else {
+      this.hideMenu();
+    }
+  }
+
+  isMenuOpen() {
+    return this.menu.classList.contains("menu--show");
+  }
+
+  hideMenu() {
+    this.menu.style.transform = "";
+    this.menu.classList.remove("menu--show");
+    this.menuOverlay.classList.remove("menu__overlay--show");
+  }
+
+  showMenu() {
+    this.menu.classList.add("menu--show");
+    this.menuOverlay.classList.add("menu__overlay--show");
   }
 
   bindNavigation() {
     document.body.addEventListener('keyup', (event) => {
-      let activeMenuElement = document.querySelector('.menu__list a.active');
-      let activeElementParent = activeMenuElement.parentElement;
+      let activeElementParent = this.menuList.parentElement;
       if (event.key === 'ArrowLeft') {
         let activeSiblingElement = activeElementParent.previousElementSibling;
         if (activeSiblingElement && activeSiblingElement.children) {
@@ -83,9 +117,14 @@ class Menu extends Component {
             <a href="https://github.com/orgs/code-kotis/people?utf8=%E2%9C%93&query=%20role%3Aowner" target="_blank" rel="noopener">Authors</a>
           </div>
         </div>
+        <div className="menu__overlay" onClick={this.hideMenu}></div>
       </div>
     );
   }
 }
 
 export default Menu;
+
+Menu.defaultProps = {
+  isMenuOpen: false
+};

@@ -1,5 +1,5 @@
 .menu {
-  width: 290px;
+  width: 270px;
   height: 100%;
   background: #fff;
   position: fixed;
@@ -8,16 +8,11 @@
   will-change: transform;
   transition: transform 0.33s cubic-bezier(0, 0, 0.30, 1);
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
-  /*border-right: 1px solid #eaeaea;*/
   z-index: 1;
 }
 
 .menu--hide {
   transform: translateX(-103%);
-}
-
-.menu--show {
-  transform: translateX(0);
 }
 
 .menu__list {
@@ -60,7 +55,7 @@
   color: inherit;
   display: block;
   padding: 15px 20px;
-  font-size: 15px;
+  font-size: 14px;
   height: 56px;
 }
 
@@ -75,6 +70,50 @@
   color: #000;
 }
 
+.menu__icon {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  position: relative;
+  margin: 4px;
+  display: none;
+  cursor: pointer;
+}
+
+.menu__icon:focus,
+.menu__icon:hover {
+  opacity: 0.8;
+  outline: 1px solid #fff;
+}
+
+.menu__icon svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.menu__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.15s cubic-bezier(0, 0, 0.30, 1);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu__overlay--show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .menu__steps {
   width: 30px;
   height: 30px;
@@ -83,7 +122,7 @@
   background: #ccc;
   text-align: center;
   vertical-align: middle;
-  margin-right: 15px;
+  margin-right: 10px;
   line-height: 30px;
   z-index: 2;
   font-weight: normal;
@@ -102,4 +141,12 @@
   .menu {
     transform: translateX(-103%);
   }
+
+  .menu__icon {
+    display: inline-block;
+  }
+}
+
+.menu.menu--show {
+  transform: translateX(0);
 }
