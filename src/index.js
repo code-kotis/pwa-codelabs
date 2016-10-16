@@ -16,13 +16,13 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/codelabs" component={App}>
       <IndexRoute component={Introduction} />
-      <Route path="/introduction" component={Introduction} />
-      <Route path="/setup" component={Setup} />
-      <Route path="/serviceworker" component={ServiceWorker} />
-      <Route path="/offline" component={Offline} />
-      <Route path="/push" component={Push} />
-      <Route path="/bgsync" component={BGSync} />
-      <Route path="/finish" component={Finish} />
+      <Route path="/codelabs/introduction" component={Introduction} />
+      <Route path="/codelabs/setup" component={Setup} />
+      <Route path="/codelabs/serviceworker" component={ServiceWorker} />
+      <Route path="/codelabs/offline" component={Offline} />
+      <Route path="/codelabs/push" component={Push} />
+      <Route path="/codelabs/bgsync" component={BGSync} />
+      <Route path="/codelabs/finish" component={Finish} />
     </Route>
   </Router>,
   document.getElementById('root')
