@@ -15,6 +15,12 @@
   transform: translateX(-103%);
 }
 
+.menu__logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 12px;
+}
+
 .menu__list {
   width: inherit;
   height: calc(100% - 60px);

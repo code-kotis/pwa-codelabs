@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NavLink from './NavLink';
 import './Menu.css';
+import codelabsImg from './code-labs.png';
 
 class Menu extends Component {
   componentDidMount() {
@@ -63,6 +64,7 @@ class Menu extends Component {
     return(
       <div className="menu-container">
         <div className="menu">
+          <img className="menu__logo" src={codelabsImg} alt="logo" />
           <ul className="menu__list">
             <li>
               <NavLink to="/" onlyActiveOnIndex={true}>
