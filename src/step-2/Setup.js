@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Highlight from '../Highlight';
+import Highlight from 'react-syntax-highlight';
 
 class Setup extends Component {
   render() {

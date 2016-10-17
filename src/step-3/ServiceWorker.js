@@ -73,7 +73,7 @@ self.addEventListener('install', function (event) {
 
 
         <p><b>Activate Event</b></p>
-
+        <p></p>
         <p><b><a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">Browser Support</a></b></p>
       </div>
     );
