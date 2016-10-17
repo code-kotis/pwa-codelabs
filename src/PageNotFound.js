@@ -6,7 +6,7 @@ class PageNotFound extends Component {
     return (
       <div className="page__notfound">
         <h1>404 Page Not Found.</h1>
-        <p>Go to <Link to="/codelabs/">Home Page</Link></p>
+        <p>Go to <Link to="/">Home Page</Link></p>
       </div>
     )
   }

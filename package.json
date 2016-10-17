@@ -19,5 +19,5 @@
     "deploy": "npm run build && bash deploy.sh",
     "sw-precache": "sw-precache --root='build/' --static-file-globs='build/**/' --verbose"
   },
-  "homepage": "/codelabs"
+  "homepage": "./"
 }
