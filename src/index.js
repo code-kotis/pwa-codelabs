@@ -11,6 +11,7 @@ import BGSync from './step-6/BGSync';
 import Finish from './step-7/Finish';
 import PageNotFound from './PageNotFound';
 import './index.css';
+import './App.css';
 import './syntax.css';
 
 ReactDOM.render(

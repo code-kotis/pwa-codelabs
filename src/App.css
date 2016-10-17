@@ -1,5 +1,5 @@
 .app__container {
-  padding: 90px 20px 20px 10px;
+  padding: 90px 10px 20px 10px;
   margin-left: 280px;
   background: #dedede;
 }
@@ -50,7 +50,8 @@
 }
 
 .pwa li {
-  padding-left: 25px;
+  display: block;
+  padding-left: 23px;
   padding-top: 0;
 }
 

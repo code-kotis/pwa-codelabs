@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 import Header from './Header';
-import './App.css';
 import GitHub from './GitHub.png';
 
 class App extends Component {

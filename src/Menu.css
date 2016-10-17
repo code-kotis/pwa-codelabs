@@ -28,6 +28,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   margin-left: 0;
+  margin-top: 4px;
 }
 
 .menu__list li {
