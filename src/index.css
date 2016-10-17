@@ -25,8 +25,8 @@ h1 {
 
 p {
   line-height: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 15px;
 }
 
@@ -44,9 +44,7 @@ ul {
 }
 
 li {
-  padding: 10px;
-  padding-top: 5px;
-  padding-left: 0;
+  padding: 0 10px 10px 0;
   margin-left: 10px;
 }
 

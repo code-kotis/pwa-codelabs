@@ -13,6 +13,8 @@ class Introduction extends Component {
           <li><b>Responsive</b> - Fits any form factor and works across the devices.</li>
           <li><b>Secure</b> - Served via https <span className="big">🔒</span>.</li>
           <li><b>App like</b> - Using app shell architecture to provide native app like experience.</li>
+          <li><b>Fresh</b> - Always up-to-date due to service worker.</li>
+          <li><b>Connectivity independent</b> - Serves content even when its offline or in slow connections.</li>
           <li><b>Discoverable</b> - Manifest and service workers allows search engine to find them.</li>
           <li><b>Installable</b> - Add to homescreen.</li>
           <li><b>Linkable</b> - No installation like native apps, easy to share.</li>
@@ -20,7 +22,7 @@ class Introduction extends Component {
         <p><b>What you will learn</b></p>
         <ul>
           <li>Service worker and its lifecycle</li>
-          <li>How to cache resources and serve it when offline</li>
+          <li>How to cache resources and serve it</li>
           <li>Push notifications</li>
           <li>Background sync</li>
         </ul>

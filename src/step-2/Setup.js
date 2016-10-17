@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SyntaxHighlighter from '../SyntaxHighlighter';
+import Highlight from '../Highlight';
 
 class Setup extends Component {
   render() {
@@ -11,10 +11,10 @@ class Setup extends Component {
         <b>Steps</b>
         <ul className="setup__steps">
           <li>Clone the repo via command line.</li>
-          <SyntaxHighlighter>
+          <Highlight>
             <span className="bash">
               <span className="no--select space">$</span>{code}</span>
-          </SyntaxHighlighter>
+          </Highlight>
           <li>Download this chrome extention to run your code in localhost server.</li>
           <a className="btn" href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Web Server</a>
 
