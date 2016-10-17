@@ -35,9 +35,8 @@ class Introduction extends Component {
           <li><a href="https://nodejs.org/en/" target="_blank">Node</a> (for deployment)</li>
         </ul>
 
-        <Note>
-          <h4>Facts: </h4>
-          <p>Flipkart triples time-on-site with <a href="https://developers.google.com/web/showcase/2016/flipkart" target="_blank">Progressive Web App</a> and got 40% higher re-engagement rate.</p>
+        <Note type="facts">
+          <p><span>Facts: </span> Flipkart triples time-on-site with <a href="https://developers.google.com/web/showcase/2016/flipkart" target="_blank">Progressive Web App</a> and got 40% higher re-engagement rate.</p>
         </Note>
       </div>
     );
