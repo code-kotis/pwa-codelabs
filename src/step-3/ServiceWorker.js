@@ -46,7 +46,9 @@ self.addEventListener('install', function (event) {
 //Adding 'activate' event listener
 self.addEventListener('activate', function (event) {
   console.log('Event: Activate');
-  //Delete unwanted and old caches here
+  event.waitUntil(
+    //Delete unwanted and old caches here
+  );
 });
 `;
 
@@ -57,9 +59,10 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (event) {
   console.log('Event: Fetch', event.request.url);
 
-  //Tell the browser to wait for newtwork request and respond with below
+  //Tell the browser to wait for network request and respond with below
   event.respondWith(
-    //Check the caches, if request is already in cache, return its response
+    //Check the caches.
+    //If request is already in cache, return its response
     //Else, make a fetch and add the request to the cache
     })
   );
@@ -69,18 +72,18 @@ self.addEventListener('fetch', function (event) {
     return(
       <div className="serviceworker">
         <h1>3. Service Worker</h1>
-        <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. Service worker can intercept and handle the network requests for the registered domain.</p>
+        <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. Service worker can intercept and handle the network requests for the registered domain. Service worker doesn't have <span className="hightlight bold no--bg">DOM</span> access.</p>
         <Note type="notes">
-          <p><span>Note: </span> Service worker will work only when the page is served via https. Of course its includes http://localhost.</p>
+          <p><span>Note: </span> Service worker will work only when the page is served via https. For testing and development it can work on <span className="hightlight bold no--bg">http://localhost.</span></p>
         </Note>
 
         <p>Know more about <a href="https://github.com/w3c/ServiceWorker/blob/master/explainer.md" target="_blank">service worker</a>.</p>
 
         <h2>Service Worker Lifecycle</h2>
         <ul>
-          <li><b>Install Event</b> - The first event a service worker gets and it only happens once.</li>
-          <li><b>Activate Event</b> - After registering and install event, also used to clean up caches.</li>
-          <li><b>Fetch Event</b> - Triggered for every request made by your application, after install.</li>
+          <li><b>Install Event</b> - The first event and happens only once.</li>
+          <li><b>Activate Event</b> - To clean up unwanted and old caches.</li>
+          <li><b>Fetch Event</b> - Triggers for every request made by your application.</li>
         </ul>
 
         <p><b>How to register a service worker ?</b></p>
@@ -109,14 +112,14 @@ self.addEventListener('fetch', function (event) {
         </Note>
 
         <h2>Fetch Event</h2>
-        <p>After activate event, <span className="hightlight bold">fetch</span> events are triggered. Whenever the browser request an resourse with in service worker scope, you can listen to network request in fetch event by adding an event listener like below.</p>
+        <p>After activate event, <span className="hightlight bold">fetch</span> events are triggered. Whenever the browser requests a resourse within the service worker scope, fetch event can listen to network requests as shown below.</p>
 
         <Highlight lang='javascript' value={fetchEvent} />
 
         <h2>Browser Support</h2>
-        <p>Service worker is supported in <span className="hightlight bold no--bg">Google Chrome</span>, <span className="hightlight bold no--bg">Mozilla Firefox</span>, <span className="hightlight bold no--bg">Opera</span> and <span className="hightlight bold no--bg">Microsoft Edge</span> is in <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/?q=service%20worker" target="_blank">development.</a> <span className="hightlight bold no--bg">Safari</span> is still in under <a href="https://webkit.org/status/?#specification-service-workers" target="_blank">consideration</a> (🤖).</p>
+        <p>Service worker is supported in <span className="hightlight bold no--bg">Google Chrome</span>, <span className="hightlight bold no--bg">Mozilla Firefox</span>, <span className="hightlight bold no--bg">Opera</span> and support for <span className="hightlight bold no--bg">Microsoft Edge</span> is <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/?q=service%20worker" target="_blank">in development</a>. For <span className="hightlight bold no--bg">Safari</span>, it is still <a href="https://webkit.org/status/?#specification-service-workers" target="_blank">under consideration</a> (🤖).</p>
         <img src={swSupport} alt="Browser support"/>
-        <p>More details about service worker <b><a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">browser support</a>.</b></p>
+        <p>More details about service worker <a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">browser support</a>.</p>
 
 
         <h2>Article References</h2>

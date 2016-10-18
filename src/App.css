@@ -103,7 +103,8 @@
 
 .app__notes p {
   word-break: break-word;
-  margin-left: 20px;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
 }
 
 .app__notes a {
