@@ -4,6 +4,7 @@ var filesToCache = [
 	'./index.html',
 	'./index.html?utm=homescreen', //Query strings are treated as seperate page
 	'./css/styles.css',
+	'./images/location.png',
 	'./js/menu.js',
 	'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' //3rd party resource
 ];
