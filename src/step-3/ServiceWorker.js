@@ -10,8 +10,8 @@ class ServiceWorker extends Component {
 
 // If service worker is supported, then register it
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./serviceWorker.js').then(function (registration) {
-    console.log('service worker is registered ', registration);
+  navigator.serviceWorker.register('./service-worker.js').then(function (registration) {
+    console.log('service worker is registered!');
   })
   .catch(function (error) {
     console.log('service worker registration failed ', error);
@@ -24,48 +24,29 @@ else {
     const installEvent =
     `/* In service-worker.js */
 
-var cacheName = 'static-v1'; //Cache Name
+var cacheName = 'cache-v1'; //Cache Name
 //Files to cache
 var filesToCache = [
   'index.html',
   'styles.css',
-  'app.js'
+  'https://fonts.googleapis.com/css?family=Roboto:regular,bold,medium&amp;lang=en'
 ];
 
 //Adding 'install' event listener
 self.addEventListener('install', function (event) {
-  console.log('[Install] event');
+  console.log('Event: Install');
   event.waitUntill(
-    caches.open(cacheName)
-      .then(function (cache) {
-        return cache.addAll(filesToCache) //Adding the files to cache
-          .then(function () {
-            console.info('All files are cached in .', cacheName);
-          })
-      })
+    //Add the files to cache here
   );
 });`;
 
     const activateEvent =
 `/* In service-worker.js */
 
-var cacheName = 'static-v2'; //New cache name
-
 //Adding 'activate' event listener
 self.addEventListener('activate', function (event) {
-  console.log('[Activate] event');
-  event.waitUntill(
-    //Delete unwanted caches and the old 'static-v1'
-    caches.keys().then(function (keys) {
-      return Promise.all(keys.map(function (key) {
-        if (key !== cacheName) {
-          return caches.delete(key);
-        }
-      })
-    )).then(function () {
-      console.log(cacheName, ' is now ready to handle the fetch requests.');
-    })
-  );
+  console.log('Event: Activate');
+  //Delete unwanted and old caches here
 });
 `;
 
@@ -74,27 +55,12 @@ self.addEventListener('activate', function (event) {
 
 //Adding 'fetch' event listener
 self.addEventListener('fetch', function (event) {
-  console.log('[Fetch] event', event.request.url);
+  console.log('Event: Fetch', event.request.url);
 
   //Tell the browser to wait for newtwork request and respond with below
   event.respondWith(
     //Check the caches, if request is already in cache, return its response
-    caches.match(request).then(function(response) {
-      if (response) {
-        return response;
-      }
-
-      //else add the request to cache by fetch again
-      return fetch(request).then(function(response) {
-        var responseToCache = response.clone();
-        caches.open(cacheName).then(
-          function(cache) {
-            //Adding request and response to cache
-            cache.put(request, responseToCache);
-          });
-
-        return response; //After adding to cache, return the response
-      });
+    //Else, make a fetch and add the request to the cache
     })
   );
 });
