@@ -10,12 +10,13 @@ class ServiceWorker extends Component {
 
 // If service worker is supported, then register it
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js').then(function (registration) {
-    console.log('service worker is registered!');
-  })
-  .catch(function (error) {
-    console.log('service worker registration failed ', error);
-  });
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(function (registration) {
+      console.log('service worker is registered!');
+    })
+    .catch(function (error) {
+      console.log('service worker registration failed ', error);
+    });
 }
 else {
   console.log('service worker is not supported.');
@@ -27,9 +28,10 @@ else {
 var cacheName = 'cache-v1'; //Cache Name
 //Files to cache
 var filesToCache = [
-  'index.html',
-  'styles.css',
-  'https://fonts.googleapis.com/css?family=Roboto:regular,bold,medium&amp;lang=en'
+  './index.html',
+  './index.html?utm=homescreen', //query strings are treated as seperate page
+  './css/styles.css',
+  'https://fonts.googleapis.com/css?family=Roboto:regular,bold,medium&amp;lang=en',
 ];
 
 //Adding 'install' event listener
@@ -72,23 +74,23 @@ self.addEventListener('fetch', function (event) {
     return(
       <div className="serviceworker">
         <h1>3. Service Worker</h1>
-        <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. Service worker can intercept and handle the network requests for the registered domain. Service worker doesn't have <span className="hightlight bold no--bg">DOM</span> access.</p>
+        <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. It can intercept and handle the network requests for the registered domain. It doesn't have <span className="hightlight bold no--bg">DOM</span> access.</p>
         <Note type="notes">
-          <p><span>Note: </span> Service worker will work only when the page is served via https. For testing and development it can work on <span className="hightlight bold no--bg">http://localhost.</span></p>
+          <p><span>Note: </span> Service worker will work only when the page is served via https. For testing and development purposes it works in <span className="hightlight bold no--bg">http://localhost</span>.</p>
         </Note>
 
         <p>Know more about <a href="https://github.com/w3c/ServiceWorker/blob/master/explainer.md" target="_blank">service worker</a>.</p>
 
+        <h2>How to register a service worker?</h2>
+        <p>A service worker is registered by passing the service-worker file (should be in root directory) in the <span className="hightlight bold">register</span> method which returns a promise like below.</p>
+        <Highlight lang='javascript' value={registerEvent} />
+
         <h2>Service Worker Lifecycle</h2>
         <ul>
-          <li><b>Install Event</b> - The first event and happens only once.</li>
+          <li><b>Install Event</b> - After successful service worker registration, install event is triggered and happens only once.</li>
           <li><b>Activate Event</b> - To clean up unwanted and old caches.</li>
           <li><b>Fetch Event</b> - Triggers for every request made by your application.</li>
         </ul>
-
-        <p><b>How to register a service worker ?</b></p>
-        <p>A service worker is registered by passing the service-worker file path in <span className="hightlight bold">register</span> method which returns a promise like below.</p>
-        <Highlight lang='javascript' value={registerEvent} />
 
         <h2>Install Event</h2>
         <p>After registering the service worker, <span className="hightlight bold">install event</span> is fired. Fetch event wont happen unless the install event is successful. But don’t expect them to take control of the page on the first visit, you need to refresh the page to see the effects of service worker.</p>
