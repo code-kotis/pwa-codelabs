@@ -17,7 +17,7 @@ class Introduction extends Component {
           <li><b>Connectivity independent</b> - Serves content even when its offline or in slow connections.</li>
           <li><b>Discoverable</b> - Manifest and service workers allows search engine to find them.</li>
           <li><b>Installable</b> - Add to homescreen.</li>
-          <li><b>Linkable</b> - No installation like native apps, easy to share.</li>
+          <li><b>Linkable</b> - Easy to share.</li>
         </ul>
         <p><b>What you will learn</b></p>
         <ul>
