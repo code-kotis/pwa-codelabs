@@ -8,11 +8,9 @@
 
 ##### Step 2 - ```npm install```
 
-##### Step 3 - ```npm run serve```
+##### Step 3 - ```npm run server```
 
-- Open [http://localhost:8000](http://localhost:8000) in
-chrome browser.
-
+- Open [http://localhost:8000](http://localhost:8000) in chrome browser.
 
 - Then follow the steps
 

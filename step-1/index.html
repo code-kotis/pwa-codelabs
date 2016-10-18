@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
   <title>Step 1 - Register SW</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,medium&amp;lang=en" rel="stylesheet">
+  <link href="./css/styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
 <body>
 
@@ -30,14 +30,22 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js', { scope: './' }) //To set service worker scope
         .then(function (register) {
-          console.log('service worker is registered!');
+          if (register.installing) {
+            console.log('Service worker is installing!');
+          }
+          else if (register.waiting) {
+            console.log('Service worker is waiting!');
+          }
+          else if (register.active) {
+            console.log('Service worker is active!');
+          }
         })
         .catch(function (error) {
-          console.log('service worker registration failed ', error);
+          console.log('Service worker registration failed ', error);
         });
     }
     else {
-      console.log('service worker is not supported.');
+      console.log('Service worker is not supported.');
     }
   </script>
 </body>
