@@ -19,13 +19,15 @@ class Introduction extends Component {
           <li><b>Installable</b> - Add to homescreen.</li>
           <li><b>Linkable</b> - Easy to share.</li>
         </ul>
+        
         <p><b>What you will learn</b></p>
         <ul>
-          <li>Service worker and its lifecycle</li>
-          <li>How to cache resources and serve it</li>
+          <li>Whats is a Service worker and its lifecycle</li>
+          <li>How to cache resources and serve it when offline</li>
           <li>Push notifications</li>
           <li>Background sync</li>
         </ul>
+        
         <p><b>Things you need</b></p>
         <ul>
           <li><a href="https://www.google.com/chrome/browser/desktop/" target="_blank">Chrome Browser</a> 46 or above</li>
