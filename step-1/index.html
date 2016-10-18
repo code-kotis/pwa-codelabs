@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>Step 1 - Register SW</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,medium&amp;lang=en" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__icon">
+        <svg width="24px" height="24px" viewBox="0 0 48 48" fill="#fff">
+          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+        </svg>
+      </div>
+      <h1>Step 1 - Register SW</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main__container"></div>
+
+  <!-- JS Files -->
+  <script type="text/javascript">
+    // If service worker is supported, then register it.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: './' }) //To set service worker scope
+        .then(function (register) {
+          console.log('service worker is registered!');
+        })
+        .catch(function (error) {
+          console.log('service worker registration failed ', error);
+        });
+    }
+    else {
+      console.log('service worker is not supported.');
+    }
+  </script>
+</body>
+</html>
