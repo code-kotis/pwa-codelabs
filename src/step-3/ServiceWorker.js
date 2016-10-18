@@ -139,7 +139,7 @@ self.addEventListener('fetch', function (event) {
         <Highlight lang='javascript' value={activateEvent} />
 
         <Note type="tips">
-          <p><span>Tips: </span> By using<span className="hightlight bold no--bg">self.clients.claim()</span>method in activate event, we can tell service worker to set itself as the active on current client and all other active clients.</p>
+          <p><span>Tips: </span> By using <span className="hightlight bold no--bg">self.clients.claim()</span> method in activate event, we can tell service worker to set itself as the active on current client and all other active clients.</p>
         </Note>
 
         <h2>Fetch Event</h2>
