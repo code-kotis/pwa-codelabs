@@ -4,11 +4,11 @@
 
 ### Setup
 
-###### Step 1 - clone this repo and cd into the repo
+##### Step 1 - Clone this repo and cd into the repo
 
-###### Step 2 - ```npm install```
+##### Step 2 - Do ```npm install```
 
-###### Step 3 -  ```npm run serve```
+##### Step 3 -  To run the sample, type ```npm run serve```
 
 - Open [http://localhost:8000](http://localhost:8000) in
 chrome browser.
