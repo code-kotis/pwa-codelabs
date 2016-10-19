@@ -19,7 +19,7 @@
 	var dialogInputBtn = document.querySelector('.dialog__add');
 
 	function fetchGithubInfo(userInput) {
-		var username = userInput || localStorage.getItem('username');
+		var username = userInput || localStorage.getItem('username') || 'gokulkrishh';
 		
 		//Fetch API
 		fetch('https://api.github.com/users/' + username).then(function (response) {
