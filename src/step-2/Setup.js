@@ -8,7 +8,7 @@ class Setup extends Component {
     const installDependencies = '$ npm install';
     const runProject = '$ npm run server';
     return(
-      <div>
+      <div className="setup">
         <h1>2. Setup</h1>
         <p>To setup the codelabs, follow the below steps.</p>
         <h2>Steps</h2>
@@ -29,7 +29,7 @@ class Setup extends Component {
           
           <Highlight lang="bash" value={installDependencies} />
 
-          <li>Final step. To run the sample repo. Below command will open the localhost in your browser.</li>
+          <li>Run the codelabs sample.</li>
           
           <Highlight lang="bash" value={runProject} />
         </ul>

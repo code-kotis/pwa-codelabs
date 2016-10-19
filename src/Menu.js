@@ -5,12 +5,11 @@ import codelabsImg from './code-labs.png';
 
 class Menu extends Component {
   componentDidMount() {
-    this.bindNavigation();
     this.hideMenu = this.hideMenu.bind(this);
-    this.menuIcon = document.querySelector(".menu__icon");
-    this.menu = document.querySelector(".menu");
-    this.menuOverlay = document.querySelector(".menu__overlay");
-    this.menuList = null;
+    this.menuIcon = document.querySelector('.menu__icon');
+    this.menu = document.querySelector('.menu');
+    this.menuOverlay = document.querySelector('.menu__overlay');
+    this.bindNavigation();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,18 +28,17 @@ class Menu extends Component {
   }
 
   isMenuOpen() {
-    return this.menu.classList.contains("menu--show");
+    return this.menu.classList.contains('menu--show');
   }
 
   hideMenu() {
-    this.menu.style.transform = "";
-    this.menu.classList.remove("menu--show");
-    this.menuOverlay.classList.remove("menu__overlay--show");
+    this.menu.classList.remove('menu--show');
+    this.menuOverlay.classList.remove('menu__overlay--show');
   }
 
   showMenu() {
-    this.menu.classList.add("menu--show");
-    this.menuOverlay.classList.add("menu__overlay--show");
+    this.menu.classList.add('menu--show');
+    this.menuOverlay.classList.add('menu__overlay--show');
   }
 
   bindNavigation() {
