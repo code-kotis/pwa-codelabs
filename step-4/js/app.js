@@ -19,7 +19,7 @@
 	var dialogInputBtn = document.querySelector('.dialog__add');
 
 	function fetchGithubInfo(userInput) {
-		var username = userInput || 'gokulkrishh';
+		var username = userInput || localStorage.getItem('username');
 		
 		//Fetch API
 		fetch('https://api.github.com/users/' + username).then(function (response) {
@@ -70,8 +70,11 @@
 	//To add a new card
 	dialogInputBtn.addEventListener('click', function () {
 		var userInput = dialogInput.value;
-		if (!userInput) return;
-		fetchGithubInfo(userInput);
-		hideDialog();
+		if (!userInput) return; 
+
+		fetchGithubInfo(userInput); //Send the username to fetch
+		localStorage.setItem('username', userInput); //Storing the username in localstorage
+		
+		hideDialog(); //Hide the dialog
 	});
 })();
