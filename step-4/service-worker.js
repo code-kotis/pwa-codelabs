@@ -1,11 +1,13 @@
-var cacheName = 'cache-v1';
+var cacheName = 'cache-v3';
 
 var filesToCache = [
 	'./index.html',
 	'./index.html?utm=homescreen', //Query strings are treated as seperate page
 	'./css/styles.css',
-	'./images/location.png',
-	'./js/menu.js',
+  './images/location.png',
+	'./images/fad_add.png',
+  './js/menu.js',
+	'./js/app.js',
 	'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' //3rd party resource
 ];
 

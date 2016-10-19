@@ -88,7 +88,7 @@ li {
   will-change: transform;
   transition: transform 0.33s cubic-bezier(0, 0, 0.30, 1);
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  z-index: 2;
   transform: translateX(-103%);
 }
 
@@ -108,6 +108,7 @@ li {
   transition: opacity 0.15s cubic-bezier(0, 0, 0.30, 1);
   visibility: hidden;
   opacity: 0;
+  z-index: 1;
 }
 
 .menu__overlay--show {
@@ -154,21 +155,46 @@ li {
 }
 
 .github__card {
-  width: 500px;
+  width: 400px;
   min-height: 250px;
   background: #fff;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, .08);
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
   margin: 100px auto;
-  border-radius: 2px;
   transform: all 200ms ease-in-out;
+  -webkit-transform: all 200ms ease-in-out;
+  -moz-transform: all 200ms ease-in-out;
 }
 
 .github__header {
   width: inherit;
   height: 150px;
-  background: #333;
-  background: -webkit-linear-gradient(to left, #333 , #434343);
-  background: linear-gradient(to left, #333 , #434343);
+  position: relative;
+  background: #2196F3;
+}
+
+.github__header .link {
+  position: absolute;
+  bottom: -19px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.github__header .link:active {
+  background: #e7e7e7;
+}
+
+.github__header .link img {
+  width: 20px;
+  height: 20px;
 }
 
 .github__avatar {
@@ -191,7 +217,7 @@ li {
 .github__body {
   width: inherit;
   min-height: 200px;
-  padding: 10px;
+  padding: 0 10px;
   text-align: center;
 }
 
@@ -259,6 +285,28 @@ li {
   align-items: center;
   justify-content: space-around;
   font-size: 14px; 
+}
+
+.main__fab {
+  width: 56px;
+  height: 56px;
+  background: #F44336;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 25px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main__fab:active {
+  opacity: 0.9;
 }
 
 @media all and (max-width: 768px) {
