@@ -1,5 +1,4 @@
 (function () {
-
 	// Card Elements
 	var githubCard = document.querySelector(".github__card");
 	var avatarElement = githubCard.querySelector(".github__header img");

@@ -1,4 +1,4 @@
-var cacheName = 'cache-v3';
+var cacheName = 'cache-v2';
 
 var filesToCache = [
 	'./index.html',
@@ -34,19 +34,23 @@ self.addEventListener('install', function (event) {
 //Adding 'activate' event listener
 self.addEventListener('activate', function (event) {
   console.log('Event: Activate');
-
-  event.waitUntil( 
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cache) {
-          console.log(cache)
-          if (cache !== cacheName) {     //cacheName = 'cache-v1'
-            return caches.delete(cache); //Deleting the cache
-          }
-        })
-      );
-    })
-  );
+  
+  // Later we decided that lets rename the cache to v2, but we need to remove the old cache v1
+  
+  /* Uncomment below code to remove old caches */
+  
+  // event.waitUntil( 
+  //   caches.keys().then(function(cacheNames) {
+  //     return Promise.all(
+  //       cacheNames.map(function(cache) {
+  //         console.log(cache)
+  //         if (cache !== cacheName) {     //cacheName = 'cache-v1'
+  //           return caches.delete(cache); //Deleting the cache
+  //         }
+  //       })
+  //     );
+  //   })
+  // );
 });
 
 //Adding 'fetch' event listener

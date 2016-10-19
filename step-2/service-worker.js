@@ -33,21 +33,6 @@ self.addEventListener('install', function (event) {
 //Adding 'activate' event listener
 self.addEventListener('activate', function (event) {
   console.log('Event: Activate');
-
-  /* Uncomment below code to remove old caches */
-
-  // event.waitUntil( 
-  //   caches.keys().then(function(cacheNames) {
-  //     return Promise.all(
-  //       cacheNames.map(function(cache) {
-  //         console.log(cache)
-  //         if (cache !== cacheName) {     //cacheName = 'cache-v1'
-  //           return caches.delete(cache); //Deleting the cache
-  //         }
-  //       })
-  //     );
-  //   })
-  // );
 });
 
 //Adding 'fetch' event listener
