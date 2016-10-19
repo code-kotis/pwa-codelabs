@@ -21,7 +21,7 @@ li {
 .header {
   width: 100%;
   height: 56px;
-  background-color: #1E88E5;
+  background-color: #2196f3;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
   left: 0;
@@ -139,7 +139,7 @@ li {
 
 .menu__header {
   height: 150px;
-  background: #1E88E5;
+  background: #2196f3;
   color: #fff;
   border-bottom: 1px solid #ddd;
 }

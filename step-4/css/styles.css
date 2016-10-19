@@ -24,7 +24,7 @@ li {
 .header {
   width: 100%;
   height: 56px;
-  background-color: #1E88E5;
+  background-color: #2196f3;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
   left: 0;
@@ -143,7 +143,7 @@ li {
 
 .menu__header {
   height: 150px;
-  background: #1E88E5;
+  background: #2196f3;
   color: #fff;
   border-bottom: 1px solid #ddd;
 }
@@ -243,7 +243,7 @@ li {
 .github__body .name {
   font-size: 20px;
   font-weight: 500;
-  padding-top: 10px;
+  margin-top: 20px;
 }
 
 .github__body .location {
@@ -280,14 +280,13 @@ li {
   width: inherit;
   height: 55px;
   border-top: 1px solid #ddd;
-  font-size: 14px; 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  font-size: 14px;
 }
 
 .github__footer-content {
   display: flex;
+  justify-content: space-around;
+  line-height: 55px;
 }
 
 .github__body-content.hide,

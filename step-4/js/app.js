@@ -2,6 +2,7 @@
 
 	var githubCard = document.querySelector(".github__card");
 	var avatarElement = githubCard.querySelector(".github__header img");
+	var profileLinkElement = githubCard.querySelector(".github__header a");
 	var githubBodyElement = githubCard.querySelector(".github__body-content");
 	var nameElement = githubBodyElement.querySelector(".name span");
 	var bioElement = githubBodyElement.querySelector(".bio .text");
@@ -23,6 +24,7 @@
 			nameElement.textContent = data.name;
 			bioElement.textContent = data.bio;
 			locationElement.textContent = data.location;
+			profileLinkElement.href = data.html_url;
 			repoElement.textContent = data.public_repos;
 			followersElement.textContent = data.followers;
 			followingElement.textContent = data.following;
