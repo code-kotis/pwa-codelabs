@@ -326,8 +326,8 @@ button:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  top: 56px;
-  z-index: 0;
+  top: 0;
+  z-index: 2;
 }
 
 .dialog__content {
@@ -341,8 +341,9 @@ button:focus {
   height: 200px;
   background: #fff;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.22);
-  z-index: 1;
+  z-index: 3;
   padding: 1.5rem;
+  border-radius: 2px;
 }
 
 .dialog__overlay {
