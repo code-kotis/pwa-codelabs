@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>Step 3 - Offline</title>
+  <title>Github Cards</title>
+  <meta name="theme-color" content="#1E88E5">
   <link href="./css/styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
@@ -17,7 +18,7 @@
           <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
         </svg>
       </div>
-      <h1>Step 3 - Offline</h1>
+      <h1>Github Cards</h1>
     </div>
   </header>
 
@@ -33,9 +34,55 @@
   <!-- Menu Overlay  -->
   <div class="menu__overlay"></div>
 
-
   <!-- Main Content -->
-  <div class="main"></div>
+  <div class="main">
+    <div class="github__card">
+      <div class="github__header">
+        <img class="github__avatar" src="" alt="avatar" />
+        <a class="link" href="#">
+          <img src="./images/link.svg" alt="Link to profile">
+        </a>
+      </div>
+      
+      <div class="github__body">
+        <div class="github__body-content hide">
+          <div class="name">
+          <span></span>
+          </div>
+          <div class="location">
+            <span></span>
+          </div>
+          <div class="bio">
+            <span class="github__title">Bio:</span>
+            <span class="text"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="github__footer">
+        <div class="github__footer-content hide">
+          <div class="repos">
+          <span class="text"></span>
+          <span class="github__title"> Repos</span>
+        </div>
+
+        <div class="followers">
+          <span class="text"></span>
+          <span class="github__title"> Followers</span>
+        </div>
+
+        <div class="following">
+          <span class="text"></span>
+          <span class="github__title"> Following</span>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main__fab">
+      <img src="./images/fab_add.svg" alt="Add card" />
+    </div>
+  </div>
 
   <!-- JS Files -->
   <script type="text/javascript">
@@ -62,5 +109,6 @@
     }
   </script>
   <script src="./js/menu.js" type="text/javascript"></script>
+  <script src="./js/app.js" type="text/javascript"></script>
 </body>
 </html>

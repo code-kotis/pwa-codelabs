@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>Step 1 - Register SW</title>
+  <title>Step 1 - Service Worker Events</title>
   <link href="./css/styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header  -->
   <header class="header">
     <div class="header__container">
       <div class="header__icon">
@@ -17,12 +17,25 @@
           <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
         </svg>
       </div>
-      <h1>Step 1 - Register SW</h1>
+      <h1>Step 1 - Registering service worker</h1>
     </div>
   </header>
 
+  <!-- Menu  -->
+  <div class="menu">
+    <div class="menu__header"></div>
+    <ul class="menu__list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/code-kotis/pwa-codelabs/tree/sample">Source</a></li>
+    <ul>
+  </div>
+
+  <!-- Menu Overlay  -->
+  <div class="menu__overlay"></div>
+
+
   <!-- Main Content -->
-  <div class="main__container"></div>
+  <div class="main"></div>
 
   <!-- JS Files -->
   <script type="text/javascript">
@@ -48,5 +61,6 @@
       console.log('Service worker is not supported.');
     }
   </script>
+  <script src="./js/menu.js" type="text/javascript"></script>
 </body>
 </html>
