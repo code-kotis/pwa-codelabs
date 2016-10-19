@@ -170,7 +170,7 @@ li {
   width: inherit;
   height: 150px;
   position: relative;
-  background: #2196F3;
+  background: #e7e7e7;
 }
 
 .github__header .link {
@@ -280,11 +280,19 @@ li {
   width: inherit;
   height: 55px;
   border-top: 1px solid #ddd;
+  font-size: 14px; 
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  font-size: 14px; 
+}
+
+.github__footer-content {
+  display: flex;
+}
+
+.github__body-content.hide,
+.github__footer-content.hide {
+  opacity: 0;
 }
 
 .main__fab {
