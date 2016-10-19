@@ -226,3 +226,7 @@
 .setup li {
   padding-bottom: 0;
 }
+
+.offline__container img {
+  max-width: 100%;
+}
