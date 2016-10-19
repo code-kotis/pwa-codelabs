@@ -12,7 +12,6 @@
 	var repoElement = githubFooterElement.querySelector(".repos .text");
 	var followersElement = githubFooterElement.querySelector(".followers .text");
 	var followingElement = githubFooterElement.querySelector(".following .text");
-	var addCardElement = githubFooterElement.querySelector(".main__fab");
 
 	//Fetch API
 	fetch('https://api.github.com/users/gokulkrishh')
@@ -36,11 +35,5 @@
 		})
 		.catch(function (error) {
 			console.error("Error in fetching data ", error);
-		});
-
-
-		//Add New Card
-		addCardElement.addEventListener("click", function () {
-			
 		});
 })();

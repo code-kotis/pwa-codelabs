@@ -316,10 +316,6 @@ li {
   opacity: 0.9;
 }
 
-.dialog {
-  
-}
-
 @media all and (max-width: 768px) {
   .github__card {
     width: 420px;
