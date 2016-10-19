@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Note from '../Note';
 import appShell from './app-shell.png';
 
 class Offline extends Component {
@@ -13,6 +14,9 @@ class Offline extends Component {
       	<div className="offline__container">
       		<img src={appShell} alt="app shell" />
       	</div>
+
+      	<Note>
+      	</Note>
       </div>
     );
   }
