@@ -335,7 +335,7 @@ button:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  top: -150px;
+  top: 0;
   margin: auto;
   width: 290px;
   height: 200px;
@@ -350,19 +350,27 @@ button:focus {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.dialog__content svg {
+.dialog__close {
+  width: 40px;
+  height: 40px;
+  float: right;
+  position: relative;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dialog__close svg {
   width: 22px;
   height: 22px;
   fill: #000;
-  float: right;
-  position: relative;
-  top: -5px;
-  right: -5px;
-  cursor: pointer;
-  border-radius: 50%;
 }
 
-.dialog__content svg:active {
+.dialog__close:active {
   background: #e7e7e7;
 }
 
@@ -372,7 +380,7 @@ button:focus {
   border: 1px solid #ccc;
   color: #000;
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 20px;
   padding-left: 5px;
   outline: none;
@@ -398,6 +406,10 @@ button:focus {
 
 .dialog__add:active {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dialog--hide {
+  display: none;
 }
 
 @media all and (max-width: 768px) {
