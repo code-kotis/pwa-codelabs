@@ -3,23 +3,33 @@ import Highlight from 'react-syntax-highlight';
 
 class Setup extends Component {
   render() {
-    const code = 'git clone https://github.com/code-kotis/pwa-codelabs.git';
+    const gitClone = '$ git clone https://github.com/code-kotis/pwa-codelabs.git';
+    const switchBranch = '$ git checkout sample';
+    const installDependencies = '$ npm install';
     return(
       <div>
         <h1>2. Setup</h1>
         <p>To setup the codelabs, follow the below steps.</p>
-        <b>Steps</b>
+        <h2>Steps</h2>
         <ul className="setup__steps">
           <li>Clone the repo via command line.</li>
-          <Highlight>
-            <span className="bash">
-              <span className="no--select space">$</span>{code}</span>
-          </Highlight>
-          <li>Download this chrome extention to run your code in localhost server.</li>
-          <a className="btn" href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Web Server</a>
+          
+          <Highlight lang="bash" value={gitClone} />
+          
+          <li>Switch the git branch to sample.</li>
+          
+          <Highlight lang="bash" value={switchBranch} />
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/AK6swHiPtew" frameBorder="0" allowFullScreen></iframe>
+          <li>If you don't have node installed in your system. Download and install it from below.</li>
+          
+          <a className="btn" href="https://nodejs.org/dist/v4.6.1/node-v4.6.1.pkg" target="_blank">Download Node</a>
+
+          <li>Final step, install the dependencies to run localhost server.</li>
+          
+          <Highlight lang="bash" value={installDependencies} />
         </ul>
+
+        <p>That's it. Setup is done.</p>
       </div>
     );
   }

@@ -65,7 +65,7 @@
 
 .btn {
   display: inline-block;
-  width: 120px;
+  min-width: 120px;
   min-height: 30px;
   background: #dedede;
   border-radius: 2px;
@@ -78,7 +78,8 @@
   line-height: 25px;
   font-size: 15px;
   transition: all 150ms ease-in;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .btn:active {
