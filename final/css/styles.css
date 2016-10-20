@@ -421,13 +421,53 @@ button:focus {
   display: none;
 }
 
+.snackbar {
+  position: fixed;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 50px;
+  background: #323232;
+  color: #fff;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: bottom 0.30s cubic-bezier(0, 0, 0.30, 1);
+  transition: bottom 0.30s cubic-bezier(0, 0, 0.30, 1);
+  will-change: transform;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.snackbar--show {
+  bottom: 0;
+}
+
+.snackbar__msg {
+  margin-left: 15px;
+  margin-right: 10px;
+  word-break: break-all;
+}
+
+.snackbar__msg {
+  font-size: 14px;
+}
+
 @media all and (max-width: 768px) {
   .github__card {
     width: 420px;
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 481px) {
   .github__card {
     width: 310px;
   }

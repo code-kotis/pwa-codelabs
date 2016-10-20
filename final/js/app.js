@@ -20,6 +20,7 @@
 	var headerElement = document.querySelector('.header');
 	var menuHeaderElement = document.querySelector('.menu__header');
 	var fabElement = document.querySelector('.main__fab');
+  var metaTagTheme = document.querySelector('meta[name=theme-color]');
 
 	function fetchGithubInfo(userInput) {
 		var username = userInput || localStorage.getItem('username') || 'gokulkrishh';
@@ -68,12 +69,16 @@
 	});
 
 	function goOffline() {
-		headerElement.style.background = '#9E9E9E';
-		menuHeaderElement.style.background = '#9E9E9E';
-		fabElement.style.background = '#9E9E9E';
+		showSnackBar("App is offline");
+		var offlineColor = '#9E9E9E';
+		metaTagTheme.setAttribute('content', offlineColor);
+		headerElement.style.background = offlineColor;
+		menuHeaderElement.style.background = offlineColor;
+		fabElement.style.background = offlineColor;
 	}
 
 	function goOnline() {
+		metaTagTheme.setAttribute('content', '#1E88E5');
 		headerElement.style.background = '';
 		menuHeaderElement.style.background = '';
 		fabElement.style.background = '';
