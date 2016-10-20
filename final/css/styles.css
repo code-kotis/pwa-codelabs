@@ -301,14 +301,6 @@ button:focus {
   opacity: 0;
 }
 
-.github__footer-logo img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-}
-
 .main__fab {
   width: 56px;
   height: 56px;
@@ -452,7 +444,6 @@ button:focus {
   transition: bottom 0.30s cubic-bezier(0, 0, 0.30, 1);
   will-change: transform;
   font-weight: 500;
-  border-radius: 2px;
 }
 
 .snackbar--show {
