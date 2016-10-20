@@ -77,32 +77,32 @@ class Menu extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/serviceworker">
+              <NavLink to="/appshell">
                 <span className="menu__steps">3</span>
+                App Shell
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/serviceworker">
+                <span className="menu__steps">4</span>
                 Service Worker
               </NavLink>
             </li>
             <li>
               <NavLink to="/offline">
-                <span className="menu__steps">4</span>
-                App Shell
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/push">
-                <span className="menu__steps">5</span>
-                Push Notification
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/bgsync">
                 <span className="menu__steps">6</span>
-                Background Sync
+                Offline
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/appLike">
+                <span className="menu__steps">7</span>
+                App Like
               </NavLink>
             </li>
             <li>
               <NavLink to="/finish">
-                <span className="menu__steps">7</span>
+                <span className="menu__steps">8</span>
                 Finish
               </NavLink>
             </li>

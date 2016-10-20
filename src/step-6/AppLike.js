@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
-class Push extends Component {
+class AppLike extends Component {
   render() {
     return(
       <div>
-        <h1>Push</h1>
+        <h1>AppLike</h1>
       </div>
     );
   }
 }
 
-export default Push;
+export default AppLike;

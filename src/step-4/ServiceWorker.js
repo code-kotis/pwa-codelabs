@@ -74,15 +74,15 @@ self.addEventListener('fetch', function (event) {
     return(
       <div className="serviceworker">
         <h1>3. Service Worker</h1>
-        <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. It can intercept and handle the network requests for the registered domain. It doesn't have <span className="hightlight bold no--bg">DOM</span> access.</p>
+        <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. It can intercept and handle the network requests for the registered domain. It doesn't have <span className="highlight bold no--bg">DOM</span> access.</p>
         <Note type="notes">
-          <p><span>Tips: </span> Service worker will work only when the page is served via https. For testing and development purposes it works in <span className="hightlight bold no--bg">http://localhost</span>.</p>
+          <p><span>Tips: </span> Service worker will work only when the page is served via https. For testing and development purposes it works in <span className="highlight bold no--bg">http://localhost</span>.</p>
         </Note>
 
         <p>Know more about <a href="https://github.com/w3c/ServiceWorker/blob/master/explainer.md" target="_blank">service worker</a>.</p>
 
         <h2>How to register a service worker?</h2>
-        <p>A service worker is registered by passing the service-worker file (should be in root directory) in the <span className="hightlight bold">register</span> method which returns a promise like below.</p>
+        <p>A service worker is registered by passing the service-worker file (should be in root directory) in the <span className="highlight bold">register</span> method which returns a promise like below.</p>
         <Highlight lang='javascript' value={registerEvent} />
 
         <h2>Service Worker Lifecycle</h2>
@@ -93,33 +93,33 @@ self.addEventListener('fetch', function (event) {
         </ul>
 
         <h2>Install Event</h2>
-        <p>After registering the service worker, <span className="hightlight bold">install event</span> is fired. Fetch event wont happen unless the install event is successful. But don’t expect them to take control of the page on the first visit, you need to refresh the page to see the effects of service worker.</p>
+        <p>After registering the service worker, <span className="highlight bold">install event</span> is fired. Fetch event wont happen unless the install event is successful. But don’t expect them to take control of the page on the first visit, you need to refresh the page to see the effects of service worker.</p>
 
         <Highlight lang='javascript' value={installEvent} />
 
         <h2>Activate Event</h2>
-        <p>After successful install event, <span className="hightlight bold">activate</span> event is fired on various cases. Below are some of them.</p>
+        <p>After successful install event, <span className="highlight bold">activate</span> event is fired on various cases. Below are some of them.</p>
 
         <h2>When an activate is triggered?</h2>
         <ul>
           <li>If there is no current active service worker.</li>
           <li>On navigating to a page which is in service worker scope.</li>
-          <li>During the <span className="hightlight bold">push</span>, <span className="hightlight bold">sync</span> event.</li>
+          <li>During the <span className="highlight bold">push</span>, <span className="highlight bold">sync</span> event.</li>
         </ul>
 
         <Highlight lang='javascript' value={activateEvent} />
 
         <Note type="tips">
-          <p><span>Tips: </span> By using <span className="hightlight bold no--bg">self.clients.claim()</span> method in activate event, we can tell service worker to set itself as the active on current client and all other active clients.</p>
+          <p><span>Tips: </span> By using <span className="highlight bold no--bg">self.clients.claim()</span> method in activate event, we can tell service worker to set itself as the active on current client and all other active clients.</p>
         </Note>
 
         <h2>Fetch Event</h2>
-        <p>After activate event, <span className="hightlight bold">fetch</span> events are triggered. Whenever the browser requests a resourse within the service worker scope, fetch event can listen to network requests as shown below.</p>
+        <p>After activate event, <span className="highlight bold">fetch</span> events are triggered. Whenever the browser requests a resourse within the service worker scope, fetch event can listen to network requests as shown below.</p>
 
         <Highlight lang='javascript' value={fetchEvent} />
 
         <h2>Browser Support</h2>
-        <p>Service worker is supported in <span className="hightlight bold no--bg">Google Chrome</span>, <span className="hightlight bold no--bg">Mozilla Firefox</span>, <span className="hightlight bold no--bg">Opera</span> and support for <span className="hightlight bold no--bg">Microsoft Edge</span> is <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/?q=service%20worker" target="_blank">in development</a>. For <span className="hightlight bold no--bg">Safari</span>, it is still <a href="https://webkit.org/status/?#specification-service-workers" target="_blank">under consideration</a> (🤖).</p>
+        <p>Service worker is supported in <span className="highlight bold no--bg">Google Chrome</span>, <span className="highlight bold no--bg">Mozilla Firefox</span>, <span className="highlight bold no--bg">Opera</span> and support for <span className="highlight bold no--bg">Microsoft Edge</span> is <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/?q=service%20worker" target="_blank">in development</a>. For <span className="highlight bold no--bg">Safari</span>, it is still <a href="https://webkit.org/status/?#specification-service-workers" target="_blank">under consideration</a> (🤖).</p>
         <img src={swSupport} alt="Browser support"/>
         <p>More details about service worker <a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">browser support</a>.</p>
 
