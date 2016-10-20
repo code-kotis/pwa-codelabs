@@ -113,7 +113,7 @@
 
 		fetchGithubInfo(userInput); //Send the username to fetch
 		localStorage.setItem('username', userInput); //Storing the username in localstorage
-		
+		dialogInput.value = "";
 		hideDialog(); //Hide the dialog
 	});
 })();
