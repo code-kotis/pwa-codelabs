@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Note from '../Note';
 import appShell from './app-shell.png';
+import appOffline from './offline-app.png';
 
 class Offline extends Component {
   render() {
@@ -21,7 +22,7 @@ class Offline extends Component {
         <p>Letting user know when go goes offline is an important feature. Flipkarts achieve this by adding lighter color to application like below.</p>
         
         <div className="offline__container">
-          <img src={appShell} alt="app shell" />
+          <img className="offline__container-app" src={appOffline} alt="app offline" />
         </div>
       </div>
     );
