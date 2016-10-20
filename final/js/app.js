@@ -23,7 +23,7 @@
   var metaTagTheme = document.querySelector('meta[name=theme-color]');
 
 	function fetchGithubInfo(userInput) {
-		var username = userInput || localStorage.getItem('username') || 'gokulkrishh';
+		var username = userInput || localStorage.getItem('username') || 'addyosmani';
 		
 		//Fetch API
 		fetch('https://api.github.com/users/' + username).then(function (response) {

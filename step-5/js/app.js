@@ -16,7 +16,7 @@
 	var menuHeaderElement = document.querySelector('.menu__header');
 	
 	//Fetch API
-	fetch('https://api.github.com/users/gokulkrishh')
+	fetch('https://api.github.com/users/addyosmani')
 		.then(function (response) {
 			return response.json();
 		})
