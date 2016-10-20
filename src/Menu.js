@@ -62,7 +62,9 @@ class Menu extends Component {
     return(
       <div className="menu-container">
         <div className="menu">
-          <img className="menu__logo" src={codelabsImg} alt="logo" />
+          <div className="menu__header">
+            <img className="menu__logo" src={codelabsImg} alt="logo" />
+          </div>
           <ul className="menu__list">
             <li>
               <NavLink to="/introduction" onlyActiveOnIndex={true}>

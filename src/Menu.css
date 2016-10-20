@@ -15,6 +15,11 @@
   transform: translateX(-103%);
 }
 
+.menu__header {
+  display: flex;
+  align-items: center;  
+}
+
 .menu__logo {
   width: 50px;
   height: 50px;

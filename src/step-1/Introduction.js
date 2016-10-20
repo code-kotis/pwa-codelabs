@@ -22,10 +22,11 @@ class Introduction extends Component {
         
         <p><b>What you will learn</b></p>
         <ul>
-          <li>Whats is a Service worker and its lifecycle</li>
-          <li>How to cache resources and serve it when offline</li>
-          <li>Push notifications</li>
-          <li>Background sync</li>
+          <li>App Shell Architecture</li>
+          <li>Service Worker and its lifecycle</li>
+          <li>Caching the resources</li>
+          <li>Offline</li>
+          <li>Native app like features.</li>
         </ul>
         
         <p><b>Things you need</b></p>
