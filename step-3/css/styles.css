@@ -170,7 +170,7 @@ li {
 
 .github__header {
   width: inherit;
-  height: 150px;
+  height: 130px;
   position: relative;
   background: #e7e7e7;
 }
@@ -199,15 +199,16 @@ li {
 
 .github__avatar {
   text-align: center;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   border-radius: 50%;
   text-indent: -9999px;
-  border: 2px solid #ccc;
+  border: 2px solid #fff;
   display: block;
   position: relative;
-  top: 25px;
+  top: 85px;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .github__avatar[src=""] {
@@ -243,7 +244,7 @@ li {
 .github__body .name {
   font-size: 20px;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .github__body .location {
