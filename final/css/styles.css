@@ -177,6 +177,8 @@ button:focus {
   height: 130px;
   position: relative;
   background: #e7e7e7;
+  background-repeat: no-repeat;
+  background-image: url('../images/github-banner.png');
 }
 
 .github__link {

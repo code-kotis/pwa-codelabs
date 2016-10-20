@@ -6,7 +6,8 @@ var filesToCache = [
 	'./css/styles.css',
   './images/location.png',
   './images/fad_add.png',
-	'./images/github.png',
+  './images/github.png',
+	'./images/github-banner.png',
   './js/menu.js',
 	'./js/app.js',
 	'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' //3rd party resource
