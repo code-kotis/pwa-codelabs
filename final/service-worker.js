@@ -5,7 +5,7 @@ var filesToCache = [
 	'./index.html?utm=homescreen', //Query strings are treated as seperate page
 	'./css/styles.css',
   './images/location.png',
-  './images/fad_add.svg',
+  './images/fab_add.svg',
 	'./images/github-banner.png',
   './js/menu.js',
 	'./js/app.js',
