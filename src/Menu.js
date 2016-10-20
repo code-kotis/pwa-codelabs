@@ -85,7 +85,7 @@ class Menu extends Component {
             <li>
               <NavLink to="/offline">
                 <span className="menu__steps">4</span>
-                Offline
+                App Shell
               </NavLink>
             </li>
             <li>

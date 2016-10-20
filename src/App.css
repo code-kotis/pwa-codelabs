@@ -230,3 +230,8 @@
 .offline__container img {
   max-width: 100%;
 }
+
+.offline i {
+  margin-bottom: 20px;
+  display: block;
+}

@@ -5,7 +5,7 @@ import App from './App';
 import Introduction from './step-1/Introduction';
 import Setup from './step-2/Setup';
 import ServiceWorker from './step-3/ServiceWorker';
-import Offline from './step-4/Offline';
+import AppShell from './step-4/AppShell';
 import Push from './step-5/Push';
 import BGSync from './step-6/BGSync';
 import Finish from './step-7/Finish';
@@ -22,7 +22,7 @@ ReactDOM.render(
       <Route path="/introduction" component={Introduction} />
       <Route path="/setup" component={Setup} />
       <Route path="/serviceworker" component={ServiceWorker} />
-      <Route path="/offline" component={Offline} />
+      <Route path="/offline" component={AppShell} />
       <Route path="/push" component={Push} />
       <Route path="/bgsync" component={BGSync} />
       <Route path="/finish" component={Finish} />
