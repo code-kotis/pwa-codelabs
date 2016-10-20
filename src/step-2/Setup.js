@@ -13,7 +13,7 @@ class Setup extends Component {
         <p>To setup the codelabs, follow the below steps.</p>
         <h2>Steps</h2>
         <ul className="setup__steps">
-          <li>Clone the repo via command line.</li>
+          <li>Clone the repository via command line.</li>
           
           <Highlight lang="bash" value={gitClone} />
           
