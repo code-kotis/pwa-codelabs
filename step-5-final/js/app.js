@@ -86,7 +86,9 @@
 
 	//Show add card dialog
 	addCardElement.addEventListener('click', function () {
-		dialogElement.classList.remove('dialog--hide');
+		if (navigator.onLine) {
+			dialogElement.classList.remove('dialog--hide');
+		}
 	});
 
 	//Cliking on the overlay to close the dialog
