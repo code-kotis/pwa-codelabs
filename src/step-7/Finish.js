@@ -21,7 +21,7 @@ class Finish extends Component {
 				<p><span className="highlight bold no--bg">Step 3</span> - Type the below command to deploy.</p>
 				<Highlight lang="bash" value={surgeDeploy} />
 
-				<p>After successful deployment, you will get an url in your terminal. Copy it and open in your browser :D</p>
+				<p>After successful deployment, you will get an url in your terminal. Copy it and open in your desktop and mobile browsers :D</p>
 
 				<Note type="tips">
 					<p><span>Tips: </span> <a href="https://surge.sh/help/getting-started-with-surge" target="_blank">Surge</a> is static web publishing services. They provide free account with unlimited deployments, custom domain, basic SSL certificate.</p>

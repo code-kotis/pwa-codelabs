@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Highlight from 'react-syntax-highlight';
 import appOffline from './offline-app.png';
 import cachedResources from './cached-resources.png';
+import Note from '../Note';
 
 class Offline extends Component {
   render() {
@@ -35,7 +36,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
           <img className="" src={appOffline} alt="app offline" />
         </div>
         
-        <i>Note: Resources cached via cache API can be view in application tab in chrome DevTools. Refer the below image.</i>
+        <Note>
+          <p><span>Note:</span> Resources cached via cache API can be view in application tab in chrome DevTools. Refer the below image.</p>
+        </Note>
+
+        <i><b>DevTools application tab:</b></i>
 
         <div className="offline__container">
           <img className="" src={cachedResources} alt="cached resources" />
