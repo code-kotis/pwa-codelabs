@@ -2,7 +2,7 @@
 	// Card Elements
 	var githubCard = document.querySelector(".github__card");
 	var avatarElement = githubCard.querySelector(".github__header img");
-	var profileLinkElement = githubCard.querySelector(".github__header a");
+	var profileLinkElement = githubCard.querySelector(".github__link");
 	var githubBodyElement = githubCard.querySelector(".github__body-content");
 	var nameElement = githubBodyElement.querySelector(".name span");
 	var bioElement = githubBodyElement.querySelector(".bio .text");

@@ -1,3 +1,5 @@
+@import 'icons.css';
+
 * {
   box-sizing: border-box;
 }
@@ -173,7 +175,7 @@ li {
   background: #e7e7e7;
 }
 
-.github__header .link {
+.github__link {
   position: absolute;
   bottom: -19px;
   right: 20px;
@@ -182,19 +184,17 @@ li {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
-.github__header .link:active {
-  background: #e7e7e7;
+.github__link .icon {
+  position: relative;
+  top: 10px;
+  left: 9px;
 }
 
-.github__header .link img {
-  width: 20px;
-  height: 20px;
+.github__link:active {
+  background: #e7e7e7;
 }
 
 .github__avatar {
