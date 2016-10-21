@@ -24,6 +24,13 @@
   top: 10px;
 }
 
+.app__source-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
 .pwa b,
 .serviceworker b {
   display: inline-block;
@@ -186,10 +193,6 @@
 
   .app__header h3 {
     padding-left: 10px;
-  }
-
-  .app__source:active {
-    outline: 1px solid #fff;
   }
 }
 

@@ -41,7 +41,7 @@ class AppLike extends Component {
 
 				<b>Sample Manifest</b>
 				
-				<Highlight lang='json' value={manifestJson} />
+				<Highlight lang="json" value={manifestJson} />
 
 				<p>More about manifest in <a href="https://w3c.github.io/manifest/">W3C Specification</a>.</p>
 
@@ -51,7 +51,6 @@ class AppLike extends Component {
 				<div className="offline__container">
           <img className="" src={manifest} alt="Manifest File" />
         </div>
-
       </div>
     );
   }
