@@ -46,7 +46,7 @@ class AppLike extends Component {
 				<p>More about manifest in <a href="https://w3c.github.io/manifest/">W3C Specification</a>.</p>
 
         <h2>Cross Browser</h2>
-        <p>Add to homescreen, splash screen are supports in <span className="highlight bold no--bg">Chrome</span>, <span className="highlight bold no--bg">Mozilla Firefox</span>, <span className="highlight bold no--bg">Opera</span>.</p>
+        <p>Add to homescreen, splash screen are supported in <span className="highlight bold no--bg">Chrome</span>, <span className="highlight bold no--bg">Mozilla Firefox</span>, <span className="highlight bold no--bg">Opera</span>.</p>
 
 				<div className="offline__container">
           <img className="" src={manifest} alt="Manifest File" />
