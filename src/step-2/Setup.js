@@ -3,8 +3,7 @@ import Highlight from 'react-syntax-highlight';
 
 class Setup extends Component {
   render() {
-    const gitClone = '$ git clone https://github.com/code-kotis/pwa-codelabs.git';
-    const switchBranch = '$ git checkout sample';
+    const gitClone = '$ git clone -b sample https://github.com/code-kotis/pwa-codelabs.git';
     const installDependencies = '$ npm install';
     const runProject = '$ npm run server';
     return(
@@ -17,10 +16,6 @@ class Setup extends Component {
           
           <Highlight lang="bash" value={gitClone} />
           
-          <li>Switch the git branch to sample.</li>
-          
-          <Highlight lang="bash" value={switchBranch} />
-
           <li>If you don't have node installed in your system. Download and install it from below.</li>
           
           <a className="btn" href="https://nodejs.org/dist/v4.6.1/node-v4.6.1.pkg" target="_blank">Download Node</a>

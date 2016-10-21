@@ -32,15 +32,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
         <p>Service worker allow us to use cache API to cache the resources and thus by providing offline experience. By caching the app shell, application loads faster repeated visits.</p>
 
-        <div className="offline__container">
-          <img className="" src={appOffline} alt="app offline" />
-        </div>
-        
         <Note>
-          <p><span>Note:</span> Resources cached via cache API can be view in application tab in chrome DevTools. Refer the below image.</p>
+          <p><span>Note:</span> Resources cached via cache API can be view in <span className="highlight bold no--bg"> Chrome Dev Tools > Application > Cache Storage</span>.</p>
         </Note>
 
-        <i><b>DevTools application tab:</b></i>
+        <b>Refer the below image:</b>
 
         <div className="offline__container">
           <img className="" src={cachedResources} alt="cached resources" />
@@ -52,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 				<p>By using <span className="highlight bold no--bg">offline/online events</span>, we can let the user know when he is offline or call an API when he has connectivity again.</p>        
 				
 				<Highlight lang='javascript' value={offlineEvent} />
+
+        <div className="offline__container">
+          <img className="" src={appOffline} alt="app offline" />
+        </div>
+        
       </div>
     );
   }
