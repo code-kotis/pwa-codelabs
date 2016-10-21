@@ -7,7 +7,7 @@ import filmStrip from './filmstrip.png';
 class AppShell extends Component {
   render() {
     return(
-      <div className="appshell">
+      <div className="introduction appshell">
       	<h1>App Shell Architecture</h1>
       	<p>An app shell architecture is minimal level <span className="highlight bold no--bg">HTML, CSS, Javascript</span> required to power the application user interface. Cached app shell loads faster on the repeated visits and only the content in app shell is loaded dymanically everytime.</p>
         <div className="offline__container">
@@ -35,8 +35,7 @@ class AppShell extends Component {
 
         <p>See the <a href="http://www.webpagetest.org/result/161021_1H_G6C/">full result</a></p>
 
-        <h3>Application using app shell in production</h3>
-        <p>Few of them are</p>
+        <h3>Applications using app shell in production</h3>
         <ul>
           <li><a href="https://www.google.com/inbox/" target="_blank">Inbox</a> by Gmail</li>
           <li><a href="flipkart.com" target="_blank">Flipkar Lite</a></li>

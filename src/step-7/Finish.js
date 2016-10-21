@@ -24,14 +24,14 @@ class Finish extends Component {
 
 				<p>After successful deployment, you will get an url in your terminal. Copy it and open in your desktop and mobile browsers :D</p>
 
-				<Note type="tips">
-					<p><span>Tips: </span> <a href="https://surge.sh/help/getting-started-with-surge" target="_blank">Surge</a> is static web publishing services. They provide free account with unlimited deployments, custom domain, basic SSL certificate.</p>
-				</Note>
-
 				<h3>What next?</h3>
 				<p>Everything is perfect, except the deployed site is loading in HTTP unless we change the url to HTTPS. So lets fix it by forcing HTTP to redirect to HTTPS.</p>
 					
 				<Highlight lang="bash" value={surgeDeployHTTPS} />
+
+				<Note type="tips">
+					<p><span>Tips: </span> <a href="https://chrome.google.com/webstore/detail/blipmdconlkpinefehnmjammfjpmpbjk" target="_blank">Lighthouse</a> analyzes web apps and web pages, collecting modern performance metrics and insights on developer best practices. Our application score was <span className="highlight bold no--bg">91/100</span>.</p>
+				</Note>
 
 				<p>Thats it all done!!</p>
       </div>
