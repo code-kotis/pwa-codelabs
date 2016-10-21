@@ -1,10 +1,10 @@
 {
-  "name": "pwa-codelabs",
+  "name": "pwa-codelabs-sample",
   "version": "0.1.0",
-  "devDependencies": {
-    "react-scripts": "0.6.1"
-  },
   "scripts": {
     "server": "http-server ./ -p 8000 -o -c-1"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
   }
 }
