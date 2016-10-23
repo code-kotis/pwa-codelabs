@@ -18,7 +18,7 @@ class Setup extends Component {
           
           <li>If you don't have node installed in your system. Download and install it from below.</li>
           
-          <a className="btn" href="https://nodejs.org/dist/v4.6.1/node-v4.6.1.pkg" target="_blank">Download Node</a>
+          <a className="btn" href="https://nodejs.org/en/download/" target="_blank">Download Node</a>
 
           <li>Install the dependencies to run localhost server.</li>
           
