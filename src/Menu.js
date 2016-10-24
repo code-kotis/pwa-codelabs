@@ -92,19 +92,19 @@ class Menu extends Component {
             </li>
             <li>
               <NavLink to="/offline">
-                <span className="menu__steps">6</span>
+                <span className="menu__steps">5</span>
                 Offline
               </NavLink>
             </li>
             <li>
               <NavLink to="/appLike">
-                <span className="menu__steps">7</span>
+                <span className="menu__steps">6</span>
                 App Like
               </NavLink>
             </li>
             <li>
               <NavLink to="/finish">
-                <span className="menu__steps">8</span>
+                <span className="menu__steps">7</span>
                 Finish
               </NavLink>
             </li>
