@@ -14,4 +14,4 @@ Service worker allow us to use cache API to cache the resources and thus by prov
 npm run server
 ```
 
-Open [localhost:8000/step-3](localhost:8000/step-3) in your chrome browser.
+Open [localhost:8000/step-3](http://localhost:8000/step-3) in your chrome browser.
