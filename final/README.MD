@@ -13,7 +13,7 @@ Final step contains snackbar, ability to add new github card and some UI improve
 npm run server
 ```
 
-Open [localhost:8000/step-4](localhost:8000/step-4) in your chrome browser.
+Open [localhost:8000/final](http://localhost:8000/final) in your chrome browser.
 
 ## Deploy
 
@@ -26,7 +26,6 @@ npm install --global surge
 - CD into final directory
 
 - Enter surge to deploy 
-
 
 ```bash
 surge
