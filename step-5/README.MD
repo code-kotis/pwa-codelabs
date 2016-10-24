@@ -13,4 +13,4 @@ Using web manifest, gives you extra control over the add to homescreen, splash s
 npm run server
 ```
 
-Open [localhost:8000/step-5](localhost:8000/step-5) in your chrome browser.
+Open [localhost:8000/step-5](http://localhost:8000/step-5) in your chrome browser.
