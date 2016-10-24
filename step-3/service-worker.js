@@ -1,4 +1,4 @@
-var cacheName = 'cache-v1'; //Cache Name
+var cacheName = 'cache-v2'; //Cache Name
 
 //Files to cache
 var filesToCache = [
@@ -34,6 +34,7 @@ self.addEventListener('install', function (event) {
 self.addEventListener('activate', function (event) {
   console.log('Event: Activate');
 
+  //Remove old cache-v1 and other unwanted caches
   event.waitUntil( 
     caches.keys().then(function(cacheNames) {
       return Promise.all(
