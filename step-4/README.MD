@@ -12,4 +12,4 @@ Using cache API to cache the Github API response and serve it.
 npm run server
 ```
 
-Open [localhost:8000/step-4](localhost:8000/step-4) in your chrome browser.
+Open [localhost:8000/step-4](http://localhost:8000/step-4) in your chrome browser.
