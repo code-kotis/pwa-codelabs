@@ -12,4 +12,4 @@ An app shell architecture is minimal level HTML, CSS, Javascript required to pow
 npm run server
 ```
 
-Open [localhost:8000/step-1](localhost:8000/step-1) in your chrome browser.
+Open [localhost:8000/step-1](http://localhost:8000/step-1) in your chrome browser.

@@ -15,4 +15,4 @@ A service worker is a event driven worker which runs in the background and sits 
 npm run server
 ```
 
-Open [localhost:8000/step-2](localhost:8000/step-2) in your chrome browser.
+Open [localhost:8000/step-2](http://localhost:8000/step-2) in your chrome browser.
