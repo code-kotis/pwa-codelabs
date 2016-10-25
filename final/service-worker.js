@@ -6,6 +6,7 @@ var filesToCache = [
 	'./css/styles.css',
   './images/location.png',
   './images/fab_add.svg',
+  './images/loading.gif',
 	'./images/github-banner.png',
   './js/menu.js',
 	'./js/app.js',
@@ -24,6 +25,7 @@ self.addEventListener('install', function (event) {
   			return cache.addAll(filesToCache)
   				.then(function () {
   					console.log("All files are cached.");
+            return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
   				})
   		})
   		.catch(function (err) {
@@ -47,6 +49,8 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
+
+  return self.clients.claim(); //To activate this SW immediately without waiting.
 });
 
 //Adding 'fetch' event listener

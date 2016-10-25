@@ -23,10 +23,6 @@ li {
   padding-left: 10px;
 }
 
-button:focus {
-  outline: none;
-} 
-
 .header {
   width: 100%;
   height: 56px;
@@ -155,21 +151,28 @@ button:focus {
 }
 
 .main {
-  width: 100%;
-  height: 100%;
-  margin-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 90px auto;
 }
 
 .github__card {
-  width: 400px;
-  min-height: 250px;
+  width: 290px;
+  min-height: 300px;
   background: #fff;
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 3px;
-  margin: 100px auto;
+  align-self: center;
+  margin: 20px;
   transform: all 200ms ease-in-out;
   -webkit-transform: all 200ms ease-in-out;
   -moz-transform: all 200ms ease-in-out;
+}
+
+.github__card.hide {
+  display: none;
 }
 
 .github__header {
@@ -248,7 +251,7 @@ button:focus {
 }
 
 .github__body .name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin-top: 40px;
 }
@@ -264,9 +267,12 @@ button:focus {
 
 .github__body div span.text {
   padding-top: 5px;
-  font-size: 15px;
-  word-break: break-word;
+  font-size: 14px;
   width: 80%;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .github__body .location::before {
@@ -460,14 +466,33 @@ button:focus {
   font-size: 14px;
 }
 
+.main__loader {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main__loader.hide {
+  display: none;
+}
+
 @media all and (max-width: 768px) {
   .github__card {
-    width: 420px;
+    width: 320px;
+  }
+
+  .main {
+    flex-direction: column;
   }
 }
 
 @media all and (max-width: 481px) {
-  .github__card {
-    width: 310px;
+  .main {
+    flex-direction: column;
   }
 }

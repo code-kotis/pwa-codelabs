@@ -23,10 +23,6 @@ li {
   padding-left: 10px;
 }
 
-button:focus {
-  outline: none;
-} 
-
 .header {
   width: 100%;
   height: 56px;

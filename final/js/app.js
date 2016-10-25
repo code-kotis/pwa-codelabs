@@ -1,16 +1,5 @@
 (function () {
-	// Card Elements
-	var githubCard = document.querySelector('.github__card');
-	var avatarElement = githubCard.querySelector('.github__header img');
-	var profileLinkElement = githubCard.querySelector('.github__header a');
-	var githubBodyElement = githubCard.querySelector('.github__body-content');
-	var nameElement = githubBodyElement.querySelector('.name span');
-	var bioElement = githubBodyElement.querySelector('.bio .text');
-	var locationElement = githubBodyElement.querySelector('.location span');
-	var githubFooterElement = githubCard.querySelector('.github__footer-content');
-	var repoElement = githubFooterElement.querySelector('.repos .text');
-	var followersElement = githubFooterElement.querySelector('.followers .text');
-	var followingElement = githubFooterElement.querySelector('.following .text');
+	// Fab & Dialog Elements
 	var addCardElement = document.querySelector('.main__fab');
 	var dialogElement = document.querySelector('.dialog');
 	var dialogOverlayElement = document.querySelector('.dialog__overlay');
@@ -21,35 +10,55 @@
 	var menuHeaderElement = document.querySelector('.menu__header');
 	var fabElement = document.querySelector('.main__fab');
   var metaTagTheme = document.querySelector('meta[name=theme-color]');
+  var loader = document.querySelector('.main__loader');
+  var userNames = JSON.parse(localStorage.getItem('usernames'));
 
-	function fetchGithubInfo(userInput) {
-		var username = userInput || localStorage.getItem('username') || 'addyosmani';
-		
+   //Show spinner
+  function showSpinner() {
+  	loader.classList.remove('hide');
+  }
+
+  //Hide spinner
+  function hideSpinner() {
+  	loader.classList.add('hide');
+  }
+
+	function fetchGithubInfo(username) {	
+		showSpinner();
+
 		//Fetch API
 		fetch('https://api.github.com/users/' + username).then(function (response) {
 			return response.json();
 		})
 		.then(function (data) {
+			hideSpinner();
+
 			if (data && data.message) {
 				return false;
 			}
-			avatarElement.src = data.avatar_url;
-			nameElement.textContent = data.name;
-			bioElement.textContent = data.bio;
-			locationElement.textContent = data.location;
-			profileLinkElement.href = data.html_url;
-			repoElement.textContent = data.public_repos;
-			followersElement.textContent = data.followers;
-			followingElement.textContent = data.following;
-			githubFooterElement.classList.remove('hide');
-			githubBodyElement.classList.remove('hide');
+
+			var newCard = document.querySelector('.github__card').cloneNode(true);
+			var newCardBody = newCard.querySelector('.github__body-content');
+			var newCardFooter = newCard.querySelector('.github__footer-content');
+
+			newCard.querySelector('.github__header img').src = data.avatar_url;
+			newCard.querySelector('.github__header a').href = data.html_url;
+			newCardBody.querySelector('.name span').textContent = data.name;
+			newCardBody.querySelector('.location span').textContent = data.location;
+			newCardBody.querySelector('.bio .text').textContent = data.bio;
+			newCardFooter.querySelector('.repos .text').textContent = data.public_repos;
+			newCardFooter.querySelector('.followers .text').textContent = data.followers;
+			newCardFooter.querySelector('.following .text').textContent = data.following;
+			newCardBody.classList.remove('hide');
+			newCardFooter.classList.remove('hide');
+			newCard.classList.remove('hide');
+			document.querySelector('.main').appendChild(newCard);
 		})
 		.catch(function (error) {
+			hideSpinner();
 			console.error('Error in fetching data ', error);
 		});
 	}
-
-	fetchGithubInfo(); //Fetch the github data on load
 
 	//Once the DOM is loaded, check for connectivity
 	document.addEventListener('DOMContentLoaded', function(event) { 
@@ -109,11 +118,23 @@
 	//To add a new card
 	dialogInputBtn.addEventListener('click', function () {
 		var userInput = dialogInput.value;
-		if (!userInput) return; 
+			
+		//If not input, return false
+		if (!userInput) {
+			return false
+		}
 
+		var usernames =  userNames || []; //Get already stored usernames
+		usernames.push(userInput);
+		localStorage.setItem('usernames', JSON.stringify(usernames)); //Storing the username in localstorage
 		fetchGithubInfo(userInput); //Send the username to fetch
-		localStorage.setItem('username', userInput); //Storing the username in localstorage
-		dialogInput.value = "";
+		dialogInput.value = ""; //Empty the input
 		hideDialog(); //Hide the dialog
 	});
+
+	if (userNames) {
+		userNames.map(function (userName) {
+			fetchGithubInfo(userName); 
+		});
+	}
 })();
