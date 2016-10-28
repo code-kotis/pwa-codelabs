@@ -46,13 +46,10 @@ li {
   height: inherit;
 }
 
-.header__container h1 {
-  font-size: 19px;
-  line-height: 58px;
-  padding-left: 10px;
+.header__container span {
+  font-size: 1.24em;
   color: #fff;
-  margin: 0;
-  font-weight: 400;
+  margin: auto 0;
 }
 
 .header__icon {
