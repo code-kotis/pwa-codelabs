@@ -11,10 +11,10 @@
 
 .hljs::selection,
 .hljs span::selection {
-	background: #d4d4d4;	
+  background: #d4d4d4;
 }
 
-.hljs::-moz-selection, 
+.hljs::-moz-selection,
 .hljs span::-moz-selection {
-	background: #d4d4d4;	
+  background: #d4d4d4;
 }
