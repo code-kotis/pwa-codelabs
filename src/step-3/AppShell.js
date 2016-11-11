@@ -7,7 +7,7 @@ import filmStrip from './filmstrip.png';
 
 class AppShell extends Component {
   render() {
-    const appShellCode = 
+    const appShellCode =
     `<!-- Header  -->
 <header class="header">
   <div class="header__container">
@@ -34,8 +34,8 @@ class AppShell extends Component {
 
     return(
       <div className="introduction appshell">
-      	<h1>App Shell Architecture</h1>
-      	<p>An app shell architecture is minimal level <span className="highlight bold no--bg">HTML, CSS, Javascript</span> required to power the application user interface.</p>
+        <h1>App Shell Architecture</h1>
+        <p>An app shell architecture is minimal level <span className="highlight bold no--bg">HTML, CSS, Javascript</span> required to power the application user interface.</p>
 
         <h3>Components for App Shell</h3>
         <ul className="">
@@ -49,7 +49,7 @@ class AppShell extends Component {
         <Highlight lang='html' value={appShellCode} />
 
         <i><b>Screenshot:</b></i>
-        
+
         <div className="offline__container">
           <img src={appShellImg} alt="app shell" />
         </div>
@@ -63,7 +63,7 @@ class AppShell extends Component {
         <div className="offline__container">
           <img src={appShellRepeated} alt="devTools network panel" />
         </div>
-        
+
         <b>Test 2: Webpagetest</b>
         <p>In webpagetest, we measured the same site in <span className="highlight bold no--bg">Chrome - 3G</span>. Load time for repeat visits was <span className="highlight bold no--bg">3.015s</span> Results are below.</p>
 
@@ -79,8 +79,8 @@ class AppShell extends Component {
           <li><a href="flipkart.com" target="_blank">Flipkar Lite</a></li>
           <li><a href="housing.com" target="_blank">Housing.com</a> mobile site</li>
         </ul>
- 
-      	<Note type="facts">
+
+        <Note type="facts">
           <p><span>Facts: </span> Using app shell model, <a href="housing.com" target="_blank">Housing.com</a> were able to load the page 30% faster than before. Read thier full case study <a href="https://developers.google.com/web/showcase/2016/pdfs/housing.pdf" target="_blank">here</a>.</p>
         </Note>
       </div>
