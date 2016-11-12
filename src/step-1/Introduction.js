@@ -7,7 +7,7 @@ class Introduction extends Component {
       <div className="introduction">
         <h1>1. Introduction</h1>
         <p>In this codelabs, you will be learning what is a progressive web application, how it works and how to build one.</p>
-        <p><b>What is a Progressive Web Application?</b></p>
+        <h2>What is a Progressive Web Application?</h2>
         <p>A progressive web application (pwa) uses modern web technologies to deliver native app like experience even when user is offline. Features are.</p>
         <ul className="pwa">
           <li><b>Responsive</b> - Fits any form factor and works across the devices.</li>
@@ -19,8 +19,8 @@ class Introduction extends Component {
           <li><b>Installable</b> - Add to homescreen.</li>
           <li><b>Linkable</b> - Easy to share.</li>
         </ul>
-        
-        <p><b>What you will learn</b></p>
+
+        <h2>What you will learn</h2>
         <ul>
           <li>App Shell Architecture</li>
           <li>Service Worker and its lifecycle</li>
@@ -28,8 +28,8 @@ class Introduction extends Component {
           <li>Offline</li>
           <li>Native app like features.</li>
         </ul>
-        
-        <p><b>Things you need</b></p>
+
+        <h2>Things you need</h2>
         <ul>
           <li><a href="https://www.google.com/chrome/browser/desktop/" target="_blank">Chrome Browser</a> 46 or above</li>
           <li>Text Editor</li>

@@ -12,7 +12,7 @@ class Finish extends Component {
       <div>
         <h1>Deploy</h1>
         <p>The final step of this codelabs is deploying our github cards with HTTPS server.</p>
-        <h3>Follow the below steps.</h3>
+        <h2>Follow the below steps.</h2>
         <p><span className="highlight bold no--bg">Step 1</span> - Install surge via npm.</p>
         <Highlight lang="bash" value={surgeInstall} />
 
@@ -24,7 +24,7 @@ class Finish extends Component {
 
         <p>After successful deployment, you will get an url in your terminal. Copy it and open in your desktop and mobile browsers :D</p>
 
-        <h3>What next?</h3>
+        <h2>What next?</h2>
         <p>Everything is perfect, except the deployed site is loading in HTTP unless we change the url to HTTPS. So lets fix it by forcing HTTP to redirect to HTTPS.</p>
 
         <Highlight lang="bash" value={surgeDeployHTTPS} />
