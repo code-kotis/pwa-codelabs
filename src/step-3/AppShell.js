@@ -37,14 +37,14 @@ class AppShell extends Component {
         <h1>App Shell Architecture</h1>
         <p>An app shell architecture is minimal level <span className="highlight bold no--bg">HTML, CSS, Javascript</span> required to power the application user interface.</p>
 
-        <h3>Components for App Shell</h3>
+        <h2>Components for App Shell</h2>
         <ul className="">
           <li>Header with icon and title</li>
           <li>Menu with overlay</li>
           <li>Main section</li>
         </ul>
 
-        <h3>HTML for App Shell</h3>
+        <h2>HTML for App Shell</h2>
 
         <Highlight lang='html' value={appShellCode} />
 
@@ -73,7 +73,7 @@ class AppShell extends Component {
 
         <p>See the full result <a href="http://www.webpagetest.org/result/161021_1H_G6C/">here</a>.</p>
 
-        <h3>Applications using app shell in production</h3>
+        <h2>Applications using app shell in production</h2>
         <ul>
           <li><a href="https://www.google.com/inbox/" target="_blank">Inbox</a> by Gmail</li>
           <li><a href="flipkart.com" target="_blank">Flipkar Lite</a></li>
