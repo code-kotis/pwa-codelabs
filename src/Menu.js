@@ -67,7 +67,7 @@ class Menu extends Component {
           </div>
           <ul className="menu__list">
             <li>
-              <NavLink to="/introduction" onlyActiveOnIndex={true}>
+              <NavLink to="/introduction">
                 <span className="menu__steps">1</span>
                 Introduction
               </NavLink>
