@@ -14,8 +14,12 @@ import './index.css';
 import './App.css';
 import './syntax.css';
 
+function scrollToTop() {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={hashHistory} onUpdate={scrollToTop}>
     <Route path="/" component={App}>
       <IndexRoute component={Introduction} />
       <IndexRedirect to="/introduction" />
