@@ -37,7 +37,7 @@ var filesToCache = [
 //Adding 'install' event listener
 self.addEventListener('install', function (event) {
   console.log('Event: Install');
-  event.waitUntill(
+  event.waitUntil(
     //Add the files to cache here
   );
 });`;
@@ -66,7 +66,6 @@ self.addEventListener('fetch', function (event) {
     //Check the caches.
     //If request is already in cache, return its response
     //Else, make a fetch and add it to the cache and return the response
-    })
   );
 });
 `;
