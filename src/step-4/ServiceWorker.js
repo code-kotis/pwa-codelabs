@@ -41,8 +41,19 @@ self.addEventListener('install', function (event) {
   console.log('Event: Install');
   
   // waitUntil method extends the lifetime of an event
-  event.waitUntil(
-    //Add the files to cache here
+   event.waitUntil(
+    //Open the cache
+    caches.open(cacheName)
+      .then(function (cache) {
+        //Adding the files to cache
+        return cache.addAll(filesToCache)
+          .then(function () {
+            console.log("All files are cached.");
+          })
+      })
+      .catch(function (err) {
+        console.log("Error occurred while caching ", err);
+      })
   );
 });`;
 
