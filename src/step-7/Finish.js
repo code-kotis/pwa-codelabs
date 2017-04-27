@@ -11,9 +11,9 @@ class Finish extends Component {
     return(
       <div>
         <h1>Deploy</h1>
-        <p>The final step of this codelabs is deploying our github cards with HTTPS server.</p>
+        <p>The final step of this codelabs is deploying our github cards using <a href="surge.sh" target="_blank">surge.sh</a>.</p>
         <h2>Follow the below steps.</h2>
-        <p><span className="highlight bold no--bg">Step 1</span> - Install surge via npm.</p>
+        <p><span className="highlight bold no--bg">Step 1</span> - Install surge cli via npm.</p>
         <Highlight lang="bash" value={surgeInstall} />
 
         <p><span className="highlight bold no--bg">Step 2</span> - Go to <span className="highlight bold no--bg">final directory</span> in sample repository.</p>
@@ -22,10 +22,10 @@ class Finish extends Component {
         <p><span className="highlight bold no--bg">Step 3</span> - Type the below command to deploy.</p>
         <Highlight lang="bash" value={surgeDeploy} />
 
-        <p>After successful deployment, you will get an url in your terminal. Copy it and open in your desktop and mobile browsers :D</p>
+        <p>After successful deployment, you will get an url in your terminal. Copy it and open in your desktop or mobile browsers 😎.</p>
 
         <h2>What next?</h2>
-        <p>Everything is perfect, except the deployed site is loading in HTTP unless we change the url to HTTPS. So lets fix it by forcing HTTP to redirect to HTTPS.</p>
+        <p>Everything is perfect, except the deployed site is loading in <span className="highlight bold no--bg">HTTP</span> unless we change the url to use <span className="highlight bold no--bg">HTTPS</span>. So lets fix it by forcing <span className="highlight bold no--bg">HTTP</span> to redirect to <span className="highlight bold no--bg">HTTPS</span>.</p>
 
         <Highlight lang="bash" value={surgeDeployHTTPS} />
 

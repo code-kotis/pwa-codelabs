@@ -8,33 +8,31 @@ class Offline extends Component {
   render() {
     const offlineEvent = `/* app.js */
 
-//After DOM load
-document.addEventListener('DOMContentLoaded', function(event) {
-  var headerElement = document.querySelector('.header');
-  var menuElement = document.querySelector('.menu__header');
+var headerElement = document.querySelector('.header');
+var menuElement = document.querySelector('.menu__header');
 
-  //On page load to check if the user is offline
+//Once the DOM is loaded, check for connectivity
+document.addEventListener('DOMContentLoaded', function(event) {
   if (!navigator.onLine) {
     goOffline();
   }
 
-  //Offline Event
+  //Offline event listener
   window.addEventListener("offline", function () {
     goOffline();
   });
+
+  //Offline Event
+  function goOffline() {
+    headerElement.style.background = '#9E9E9E';
+    menuElement.style.background = '#9E9E9E';
+  }
 
   //Online Event
   window.addEventListener("online", function () {
     headerElement.style.background = '';
     menuElement.style.background = '';
   });
-
-  //To change the header colors
-  function goOffline() {
-    var greyColor = '#9E9E9E';
-    headerElement.style.background = greyColor;
-    menuElement.style.background = greyColor;
-  }
 });
 `;
     return(
@@ -60,16 +58,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
         <Highlight lang='javascript' value={offlineEvent} />
 
-        <b>Screenshot when user is offline:</b>
+        <Note type="tips">
+          <p><span>Tips:</span> Emulate offline in Devtools by opening <span className="highlight bold no--bg">Chrome Dev Tools > Network Tab > Offline</span>.</p>
+        </Note>
+
+        <i><b>Screenshot:</b></i>
 
         <div className="offline__container">
           <img className="" src={appOffline} alt="app offline" />
         </div>
-
-        <Note type="tips">
-          <p><span>Tips:</span> Emulate offline in Devtools by opening <span className="highlight bold no--bg">Chrome Dev Tools > Network > Offline</span>.</p>
-        </Note>
-
       </div>
     );
   }

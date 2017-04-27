@@ -6,9 +6,10 @@ class Introduction extends Component {
     return(
       <div className="introduction">
         <h1>1. Introduction</h1>
-        <p>In this codelabs, you will be learning what is a progressive web application, how it works and how to build one.</p>
+        <p>In this codelabs, you will be learning what is a Progressive Web Application, how it works and how to build and deploy one.</p>
         <h2>What is a Progressive Web Application?</h2>
-        <p>A progressive web application (pwa) uses modern web technologies to deliver native app like experience even when user is offline. Features are.</p>
+        <p>A progressive web application (pwa) uses modern web technologies to deliver native app like experience even when user is offline.</p>
+        <h2>Features:</h2>  
         <ul className="pwa">
           <li><b>Responsive</b> - Fits any form factor and works across the devices.</li>
           <li><b>Secure</b> - Served via https <span className="big">🔒</span>.</li>
@@ -22,24 +23,23 @@ class Introduction extends Component {
 
         <h2>What you will learn</h2>
         <ul>
-          <li>App Shell Architecture</li>
-          <li>Service Worker and its lifecycle</li>
-          <li>Caching the resources</li>
-          <li>Offline</li>
+          <li>What is a App Shell Architecture?</li>
+          <li>Service Worker and its lifecycle.</li>
+          <li>Caching static resources.</li>
           <li>Native app like features.</li>
         </ul>
 
         <h2>Things you need</h2>
         <ul>
-          <li><a href="https://www.google.com/chrome/browser/desktop/" target="_blank">Chrome Browser</a> 46 or above</li>
-          <li>Text Editor</li>
-          <li>Sample code</li>
+          <li><a href="https://www.google.com/chrome/browser/desktop/" target="_blank">Chrome Browser 46</a> or above.</li>
+          <li>A Text Editor.</li>
+          <li>Sample code.</li>
           <li>Basic knowledge of HTML, CSS, Javascript and DevTools.</li>
-          <li><a href="https://nodejs.org/en/" target="_blank">Node</a> (for deployment)</li>
+          <li><a href="https://nodejs.org/en/" target="_blank">Node</a> (for build process & deployment).</li>
         </ul>
-
+        <p>Lets get started!</p>
         <Note type="facts">
-          <p><span>Facts: </span> Flipkart triples time-on-site with <a href="https://developers.google.com/web/showcase/2016/pdfs/flipkart.pdf" target="_blank">Progressive Web App</a> and got 40% higher re-engagement rate.</p>
+          <p>While build your progressive web app, some of the codes such as <span>HTML</span> & <span>CSS</span> will be <span>copy and pasted</span> to reduce the time on development.</p>
         </Note>
       </div>
     );

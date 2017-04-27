@@ -10,11 +10,11 @@ class ServiceWorker extends Component {
 
 // If service worker is supported, then register it
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js')
-    .then(function (registration) {
+  navigator.serviceWorker.register('./service-worker.js', {scope: './'}) // Scope of the service worker
+    .then(function(registration) {
       console.log('service worker is registered!');
     })
-    .catch(function (error) {
+    .catch(function(error) {
       console.log('service worker registration failed ', error);
     });
 }
@@ -26,17 +26,21 @@ else {
     `/* In service-worker.js */
 
 var cacheName = 'cache-v1'; //Cache Name
+
 //Files to cache
 var filesToCache = [
   './index.html',
   './index.html?utm=homescreen', //query strings are treated as seperate page
   './css/styles.css',
-  'https://fonts.googleapis.com/css?family=Roboto:regular,bold,medium&amp;lang=en',
+  './js/menu.js',
+  'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', //3rd party resource
 ];
 
 //Adding 'install' event listener
 self.addEventListener('install', function (event) {
   console.log('Event: Install');
+  
+  // waitUntil method extends the lifetime of an event
   event.waitUntil(
     //Add the files to cache here
   );
@@ -48,8 +52,18 @@ self.addEventListener('install', function (event) {
 //Adding 'activate' event listener
 self.addEventListener('activate', function (event) {
   console.log('Event: Activate');
+  
+  //Delete unwanted and old caches here
   event.waitUntil(
-    //Delete unwanted and old caches here
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cache) {
+          if (cache !== cacheName) {
+            return caches.delete(cache); //Deleting the cache
+          }
+        })
+      );
+    })
   );
 });
 `;
@@ -59,13 +73,28 @@ self.addEventListener('activate', function (event) {
 
 //Adding 'fetch' event listener
 self.addEventListener('fetch', function (event) {
-  console.log('Event: Fetch', event.request.url);
+  console.log('Event: Fetch');
+
+  var request = event.request; // request made by the app
 
   //Tell the browser to wait for network request and respond with below
   event.respondWith(
-    //Check the caches.
     //If request is already in cache, return its response
-    //Else, make a fetch and add it to the cache and return the response
+    caches.match(request).then(function(response) {
+      if (response) {
+        return response;
+      }
+
+      //else make a request and add it to cache and return the response
+      return fetch(request).then(function(response) {
+        var responseToCache = response.clone(); //Cloning the response stream in order to add it to cache
+        caches.open(cacheName).then(function(cache) {
+            cache.put(request, responseToCache); //Adding to cache
+          });
+
+        return response;
+      });
+    })
   );
 });
 `;
@@ -91,15 +120,15 @@ self.addEventListener('fetch', function (event) {
         <ul>
           <li><b>Install</b> - First event and happens only once.</li>
           <li><b>Activate</b> - To clean up unwanted and old caches.</li>
-          <li><b>Fetch</b> - Triggers for every request made by your application.</li>
+          <li><b>Fetch</b> - Triggers for every network request made by your application.</li>
         </ul>
 
-        <h2>Install Event</h2>
-        <p>After registering the service worker, <span className="highlight bold no--bg">install event</span> is fired. Fetch event wont happen unless the install event is successful. But don’t expect them to take control of the page on the first visit, you need to refresh the page to see the effects of service worker.</p>
+        <h2>1. Install Event</h2>
+        <p>After registering the service worker, <span className="highlight bold no--bg">install event</span> is fired. But don’t expect service worker to take control of the page on the first visit, you need to refresh the page to see the effects.</p>
 
         <Highlight lang='javascript' value={installEvent} />
 
-        <h2>Activate Event</h2>
+        <h2>2. Activate Event</h2>
         <p>After successful install event, <span className="highlight bold no--bg">activate event</span> is fired. Also it can happen on various cases, some of them are.</p>
 
         <h3>When an activate event is triggered?</h3>
@@ -111,11 +140,7 @@ self.addEventListener('fetch', function (event) {
 
         <Highlight lang='javascript' value={activateEvent} />
 
-        <Note type="tips">
-          <p><span>Tips: </span> By using <span className="highlight bold no--bg">self.clients.claim()</span> method, we can tell the service worker to set itself as the active worker on current and all other active clients.</p>
-        </Note>
-
-        <h2>Fetch Event</h2>
+        <h2>3. Fetch Event</h2>
         <p>After activate event, whenever the browser requests a resourse within the service worker scope, <span className="highlight bold no--bg">fetch events</span> is triggered.</p>
 
         <Highlight lang='javascript' value={fetchEvent} />
@@ -131,6 +156,10 @@ self.addEventListener('fetch', function (event) {
           <li><a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle" target="_blank">Web Fundamentals</a> - The Service Worker Lifecycle</li>
           <li><a href="https://www.smashingmagazine.com/2016/02/making-a-service-worker/" target="_blank">Smashing Magazine</a> - Making a service worker</li>
         </ul>
+
+        {/*<Note type="tips">
+          <p><span>Tips: </span> By using <span className="highlight bold no--bg">self.clients.claim()</span> method, we can tell the service worker to set itself as the active worker on current and all other active clients.</p>
+        </Note>*/}
       </div>
     );
   }

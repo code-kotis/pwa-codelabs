@@ -22,10 +22,10 @@ class AppLike extends Component {
 
     return(
       <div className="introduction">
-        <h1>AppLike</h1>
-        <p>Using <span className="highlight bold no--bg">web manifest</span>, gives you extra control over the add to homescreen, splash screen experience. Add to homescreen gives us the ability to install the web application quickly without having to worry about the size of the application.</p>
+        <h1>Native App Like</h1>
+        <p>Using <span className="highlight bold no--bg">web manifest</span>, we can bring the <span className="highlight bold no--bg">add to homescreen</span>, <span className="highlight bold no--bg">splash screen experience</span>. Add to homescreen gives us the ability to install the web application quickly without having to worry about the size of the application.</p>
 
-        <p>Manifest.json should contain the following criteria.</p>
+        <p><span className="highlight bold no--bg">manifest.json</span> should contain the following criteria.</p>
 
         <ul>
           <li>Site should be in <span className="highlight bold no--bg">HTTPS</span>.</li>
@@ -45,8 +45,10 @@ class AppLike extends Component {
 
         <p>More about manifest in <a href="https://w3c.github.io/manifest/">W3C Specification</a>.</p>
 
-        <h2>Cross Browser</h2>
+        <h2>Web Manifest Support</h2>
         <p>Add to homescreen, splash screen are supported in <span className="highlight bold no--bg">Chrome</span>, <span className="highlight bold no--bg">Mozilla Firefox</span>, <span className="highlight bold no--bg">Opera</span> and <span className="highlight bold no--bg">Safari</span> as well.</p>
+
+        <i><b>Screenshot:</b></i>
 
         <div className="offline__container">
           <img className="" src={manifest} alt="Manifest File" />

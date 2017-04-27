@@ -26,22 +26,19 @@ class AppShell extends Component {
   <ul>
 </div>
 
-<!-- Menu Overlay -->
-<div class="menu__overlay"></div>
-
 <!-- Main Section -->
 <div class="main"></div>`;
 
     return(
       <div className="introduction appshell">
-        <h1>App Shell Architecture</h1>
+        <h1>Step 1 - App Shell Architecture</h1>
         <p>An app shell architecture is minimal level <span className="highlight bold no--bg">HTML, CSS, Javascript</span> required to power the application user interface.</p>
 
         <h2>Components for App Shell</h2>
         <ul className="">
-          <li>Header with icon and title</li>
-          <li>Menu with overlay</li>
-          <li>Main section</li>
+          <li>Header with icon and title.</li>
+          <li>Hamburger menu.</li>
+          <li>Main section.</li>
         </ul>
 
         <h2>HTML for App Shell</h2>
@@ -54,24 +51,30 @@ class AppShell extends Component {
           <img src={appShellImg} alt="app shell" />
         </div>
 
-        <h1>Performance</h1>
-        <p>By caching the app shell, repeated visits on the application loads faster. To measure the performance of the app shell, we did some series of tests.</p>
+        <h1>Why you should use App Shell Architecture?</h1>
+        <h2>Performance</h2>
+        <p>By caching the app shell, repeated visits on the application were loading fast. To measure the performance of the app shell, we did some series of tests.</p>
 
-        <b>Test 1: DevTools</b>
-        <p>Lets emulate 3G connection in DevTools. On the repeated visits, app shell was loaded within a few <span className="highlight bold no--bg">milli seconds</span>.</p>
+        <b>Test 1: Using DevTools</b>
+        <p>We emulated 3G connection in DevTools Network Panel. After this on the repeated visits, the application were loading within few <span className="highlight bold no--bg">milli seconds</span>.</p>
+        
+        <i><b>Screenshot:</b></i>
 
         <div className="offline__container">
           <img src={appShellRepeated} alt="devTools network panel" />
         </div>
 
-        <b>Test 2: Webpagetest</b>
-        <p>In webpagetest, we measured the same site in <span className="highlight bold no--bg">Chrome - 3G</span>. Load time for repeat visits was <span className="highlight bold no--bg">3.015s</span> Results are below.</p>
-
+        <b>Test 2: Using Webpagetest</b>
+        <p>In webpagetest, we measured the same site in <span className="highlight bold no--bg">Chrome under 3G connection</span>. Load time for repeat visits were <span className="highlight bold no--bg">3.015s</span>.</p>
+        
+        <i><b>Screenshot:</b></i>
         <div className="offline__container">
           <img src={filmStrip} alt="web page test" />
         </div>
 
-        <p>See the full result <a href="http://www.webpagetest.org/result/161021_1H_G6C/">here</a>.</p>
+        <p>See the full result <a target="_blank" href="http://www.webpagetest.org/result/161021_1H_G6C/">here</a>.</p>
+
+        <p>It is clear from the above results, using app shell made the application faster.</p>
 
         <h2>Applications using app shell in production</h2>
         <ul>
