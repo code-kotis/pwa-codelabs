@@ -40,20 +40,12 @@
   <script type="text/javascript">
     // If service worker is supported, then register it.
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js', { scope: './' }) //To set service worker scope
+      navigator.serviceWorker.register('./service-worker.js', { scope: './' }) // Scope of the service worker
         .then(function (register) {
-          if (register.installing) {
-            console.log('Service worker is installing!');
-          }
-          else if (register.waiting) {
-            console.log('Service worker is waiting!');
-          }
-          else if (register.active) {
-            console.log('Service worker is active!');
-          }
+          console.log('service worker is registered!');
         })
         .catch(function (error) {
-          console.log('Service worker registration failed ', error);
+          console.log('service worker registration failed ', error);
         });
     }
     else {
