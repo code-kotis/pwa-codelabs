@@ -10,7 +10,7 @@ class Finish extends Component {
     const surgeDeployHTTPS = `$ surge --domain https://my-project.surge.sh`;
     return(
       <div>
-        <h1>Deploy</h1>
+        <h1>Final - Deploy</h1>
         <p>The final step of this codelabs is deploying our github cards using <a href="surge.sh" target="_blank">surge.sh</a>.</p>
         <h2>Follow the below steps.</h2>
         <p><span className="highlight bold no--bg">Step 1</span> - Install surge cli via npm.</p>

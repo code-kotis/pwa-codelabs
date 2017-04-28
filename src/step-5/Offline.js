@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 `;
     return(
       <div className="offline">
-        <h1>Offline Experience</h1>
+        <h1>Step 3 - Offline Experience</h1>
 
         <p>Service worker allow us to use cache API to cache the resources and thus by providing offline experience. By caching the app shell, application loads faster on the repeated visits.</p>
 

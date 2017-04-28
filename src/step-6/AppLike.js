@@ -22,7 +22,7 @@ class AppLike extends Component {
 
     return(
       <div className="introduction">
-        <h1>Native App Like</h1>
+        <h1>Step 4 - Native App Like</h1>
         <p>Using <span className="highlight bold no--bg">web manifest</span>, we can bring the <span className="highlight bold no--bg">add to homescreen</span>, <span className="highlight bold no--bg">splash screen experience</span>. Add to homescreen gives us the ability to install the web application quickly without having to worry about the size of the application.</p>
 
         <p><span className="highlight bold no--bg">manifest.json</span> should contain the following criteria.</p>

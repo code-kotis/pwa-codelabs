@@ -112,7 +112,7 @@ self.addEventListener('fetch', function (event) {
 
     return(
       <div className="serviceworker">
-        <h1>3. Service Worker</h1>
+        <h1>Step 2 - Service Worker</h1>
         <p>A service worker is a event driven worker which runs in the background and sits in between your application and the browser. It can intercept and handle the network requests for the registered domain.</p>
         <Note type="notes">
           <p><span>Tips: </span> Service worker will work only when the page is served via <span className="highlight bold no--bg">https</span>.</p>
