@@ -2,8 +2,38 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>Step 4 - API Request</title>
+  <meta name=description content="Github Cards">
+  <title>Step 4 - Native App Like</title>
+  
+  <!-- Theme color -->
+  <meta name="theme-color" content="#1E88E5">
+  
+  <!-- For iOS -->
+  <meta name="application-name" content="Github Cards">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Github Cards">
+  
+  <!-- Windows -->
+  <meta name="msapplication-TileColor" content="#1E88E5">
+  <meta name="msapplication-TileImage" content="./images/touch/mstile-150x150.png">
+
+  <!-- iOS touch icons -->
+  <link rel="apple-touch-icon" href="./images/touch/apple-touch-icon.png">
+  
+  <!-- Android icon -->
+  <link rel=icon sizes="192x192" href="./images/touch/android-chrome-192x192.png">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="./images/touch/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./images/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- Manifest for add to homescreen, splash screen etc, -->
+  <link rel="manifest" href="./manifest.json">
+
   <link href="./css/styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
@@ -17,7 +47,7 @@
           <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
         </svg>
       </div>
-      <h1>Step 4 - API Request</h1>
+      <h1>Step 4 - Native App Like</h1>
     </div>
   </header>
 
@@ -34,50 +64,7 @@
   <div class="menu__overlay"></div>
 
   <!-- Main Content -->
-  <div class="main">
-    <div class="github__card">
-      <div class="github__header">
-        <img class="github__avatar" src="" alt="avatar" />
-        <a class="github__link" href="#" target="_blank">          
-          <div class="link icon"></div>
-        </a>
-      </div>
-      
-      <div class="github__body">
-        <div class="github__body-content hide">
-          <div class="name">
-          <span></span>
-          </div>
-          <div class="location">
-            <span></span>
-          </div>
-          <div class="bio">
-            <span class="github__title">Bio:</span>
-            <span class="text"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="github__footer">
-        <div class="github__footer-content hide">
-          <div class="repos">
-          <span class="text"></span>
-          <span class="github__title"> Repos</span>
-        </div>
-
-        <div class="followers">
-          <span class="text"></span>
-          <span class="github__title"> Followers</span>
-        </div>
-
-        <div class="following">
-          <span class="text"></span>
-          <span class="github__title"> Following</span>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="main"></div>
 
   <!-- JS Files -->
   <script type="text/javascript">

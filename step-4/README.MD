@@ -1,10 +1,11 @@
-# Step 4 - Fetch and Offline
+# Step 5 - App Like
 
-Using cache API to cache the Github API response and serve it.
+Using web manifest, gives you extra control over the add to homescreen, splash screen. 
 
 ## Implementation
 
-- Fetch Event - To serve the cached static resources and Github API response.
+- Using manifest.json to implement custom icons, add to homescreen, splash screen.
+- Meta tags to add theme color similar to native apps.
 
 ## Run to see the result
 
@@ -12,4 +13,4 @@ Using cache API to cache the Github API response and serve it.
 npm run server
 ```
 
-Open [localhost:8000/step-4](http://localhost:8000/step-4) in your chrome browser.
+Open [localhost:8000/step-5](http://localhost:8000/step-5) in your chrome browser.

@@ -163,6 +163,9 @@ li {
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 3px;
   margin: 100px auto;
+  transform: all 200ms ease-in-out;
+  -webkit-transform: all 200ms ease-in-out;
+  -moz-transform: all 200ms ease-in-out;
 }
 
 .github__header {
@@ -290,6 +293,120 @@ li {
 .github__body-content.hide,
 .github__footer-content.hide {
   opacity: 0;
+}
+
+.main__fab {
+  width: 56px;
+  height: 56px;
+  background: #F44336;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 25px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main__fab:active {
+  opacity: 0.9;
+}
+
+.dialog,
+.dialog__overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.dialog__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 290px;
+  height: 200px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.22);
+  z-index: 3;
+  padding: 1.5rem;
+  border-radius: 2px;
+}
+
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dialog__close {
+  width: 40px;
+  height: 40px;
+  float: right;
+  position: relative;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dialog__close svg {
+  width: 22px;
+  height: 22px;
+  fill: #000;
+}
+
+.dialog__close:active {
+  background: #e7e7e7;
+}
+
+.dialog__input { 
+  width: 245px;
+  height: 32px;
+  border: 1px solid #ccc;
+  color: #000;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  outline: none;
+}
+
+.dialog__add {
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 35px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #646464;
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.dialog__add:active {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dialog--hide {
+  display: none;
 }
 
 @media all and (max-width: 768px) {
