@@ -8,9 +8,9 @@
   "dependencies": {
     "highlight.js": "^9.7.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react-dom": "^16.0.1",
     "react-router": "^2.8.1",
-    "react-syntax-highlight": "^0.0.2",
+    "react-syntax-highlight": "^0.0.3",
     "sw-precache": "^4.1.0"
   },
   "scripts": {
