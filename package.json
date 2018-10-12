@@ -11,7 +11,7 @@
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
     "react-syntax-highlight": "^0.0.2",
-    "sw-precache": "^4.1.0"
+    "sw-precache": "^4.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
