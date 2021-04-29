@@ -6,7 +6,7 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
-    "highlight.js": "^9.7.0",
+    "highlight.js": "^9.18.2",
     "react": "^16.5.0",
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
